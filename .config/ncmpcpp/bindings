@@ -1,0 +1,35 @@
+def_key "k"
+    scroll_up
+
+def_key "j"
+    scroll_down
+
+def_key "g"
+    page_up
+
+def_key "G"
+    page_down
+
+def_key "home"
+    move_home
+
+def_key "end"
+    move_end
+
+def_key "d"
+    delete_playlist_items
+
+def_key "delete"
+    delete_stored_playlist
+
+def_key "l"
+    next_column
+
+def_key "h"
+    previous_column
+
+def_key "tab"
+    next_screen
+
+def_key "l"
+    show_lyrics

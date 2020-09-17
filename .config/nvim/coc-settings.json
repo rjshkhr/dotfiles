@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "Markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "json",
+    "html",
+    "css"
+  ],
+  "javascript.suggestionActions.enabled": false,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": true,
+  "prettier.tabWidth": 4,
+  "prettier.disableSuccessMessage": true
+}

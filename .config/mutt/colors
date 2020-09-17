@@ -1,0 +1,27 @@
+color status     black         green 
+color normal     white         default
+color indicator  black         red 
+color signature  blue          default
+color hdrdefault magenta       default
+color attachment black         cyan 
+color quoted     magenta       default
+color quoted1    yellow        default
+color quoted2    red           default
+color error      red           default
+color tree       blue          default
+color tilde      blue          default
+color markers    red           default
+color message    default       default
+color search     brightwhite   magenta
+color bold       yellow        green
+color header     yellow        default "^(From|Subject):"
+
+mono  bold       bold
+mono  underline  underline
+mono  indicator  reverse
+mono  error      bold
+
+color index yellow  default '.*'
+color index_author  blue default '.*'
+color index_number  green default
+color index_subject cyan default '.*'

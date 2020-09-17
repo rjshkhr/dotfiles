@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export background=$(xrdb ~/.config/X11/xresources -query all | grep background | cut -f2)
+export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | cut -f2)
+export color5=$(xrdb ~/.config/X11/xresources -query all | grep color5 | cut -f2)
+
+dmenu_run -c -fn "xos4 Terminus" -nb "$background" -nf "$foreground" -sb "$color5" -sf "$background"
