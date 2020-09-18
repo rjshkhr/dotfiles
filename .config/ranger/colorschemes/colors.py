@@ -19,7 +19,7 @@ class colorscheme(ColorScheme):
                 fg = 7
                 bg = 1
             if context.border:
-                fg = 8
+                fg = 1
             if context.image:
                 fg = 11
             if context.video:
@@ -32,6 +32,12 @@ class colorscheme(ColorScheme):
                 fg = 1
             if context.directory:
                 fg = 14
+
+            if not context.selected and (context.cut or context.copied):
+                attr = reverse
+            if context.main_column:
+                if context.marked:
+                    fg = 2
 
         elif context.in_titlebar:
             if context.hostname:
