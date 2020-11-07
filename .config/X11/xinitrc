@@ -5,7 +5,7 @@
 xset +fp ~/.local/share/fonts
 xset fp rehash
 xsetroot -cursor_name left_ptr
-xbacklight -set 20%
+xbacklight -set 30%
 mpd &
 sxhkd &
 redshift &

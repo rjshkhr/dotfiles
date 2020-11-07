@@ -33,13 +33,13 @@ XF86Audio{Next,Prev,Play,Stop}
 
 # volume
 XF86AudioRaiseVolume
-    amixer sset -q Master 5%+ && volume &
+	pactl set-sink-volume 0 +5%
 
 XF86AudioLowerVolume
-    amixer sset -q Master 5%- && volume &
+    pactl set-sink-volume 0 -5%
 
 XF86AudioMute
-    amixer -q sset Master toggle && volume &
+    pactl set-sink-mute 0 toggle
 
 # screenshot keybindings
 Print

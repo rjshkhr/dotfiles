@@ -11,6 +11,7 @@ URxvt.cursorUnderline: true
 URxvt.geometry: 70x20
 URxvt.font: xft: Cozette
 URxvt.boldFont: xft: Cozette
+URxvt.letterSpace: 0
 
 XTerm*faceName: Cozette
 

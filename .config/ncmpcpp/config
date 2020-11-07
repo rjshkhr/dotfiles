@@ -6,7 +6,7 @@ visualizer_type = "spectrum"
 visualizer_look = "∙│"
 visualizer_color = magenta
 
-song_list_format = "{{%a - %t}|{%f}}{$R%l}"
+song_list_format = "{{%a %t}|{%f}}{$R%l}"
 current_item_prefix = $(magenta)$r
 current_item_inactive_column_prefix = $(white)$r
 now_playing_prefix = "$6"
