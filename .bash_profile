@@ -2,7 +2,7 @@
 
 # default programs
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="firefox-bin"
 export FMANAGER="ranger"
 export READER="zathura"
 

@@ -1,11 +1,6 @@
 function fish_prompt
 
-   echo (set_color magenta)(set_color normal)\
-(set_color -b magenta)(set_color black)(whoami)\
-(set_color -b normal)(set_color normal)\
-(set_color magenta)(set_color -b black)(set_color normal)\
-(set_color -b black) (prompt_pwd)(set_color -b normal)\
-(set_color black) (set_color normal)
+    echo (set_color black)(set_color -b green) (whoami) (set_color -b normal)(set_color normal)(set_color -b brblack) (prompt_pwd) (set_color -b normal) (set_color normal)
 end
 
 function fish_right_prompt

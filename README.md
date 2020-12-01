@@ -4,11 +4,11 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : [St](https://github.com/rajshekhar26/st) (with xresources patch)
++ **TERMINAL**          : Urxvt
 + **SHELL**             : Fish (interactive), Bash (login)
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : Cozette
-+ **BAR FONT**          : Terminus
++ **BAR FONT**          : Cozette
 + **ICON FONTS**        : Siji, Font Awesome
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)

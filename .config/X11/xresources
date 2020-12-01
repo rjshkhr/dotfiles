@@ -5,18 +5,18 @@
 ! terminal
 
 *.scrollBar: false
-*.internalBorder: 24
+*.internalBorder: 20
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x20
-URxvt.font: xft: Cozette
-URxvt.boldFont: xft: Cozette
+URxvt.font: xft: Cozette:size=10:antialias=true
+URxvt.boldFont: xft: Cozette:size=10:antialias=true
 URxvt.letterSpace: 0
 
-XTerm*faceName: Cozette
+XTerm*faceName: Cozette:size=9:antialias=true
 
-st.font:			Cozette
+st.font:		    Cozette
 st.shell:			/bin/sh
 st.chscale:			1.0
-st.cwscale:			0.8
-st.borderpx:		24
+st.cwscale:		    1.0
+st.borderpx:		20
