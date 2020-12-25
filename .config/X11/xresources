@@ -6,16 +6,17 @@
 
 *.scrollBar: false
 *.internalBorder: 20
+Xcursor.theme: cursor-theme
 
 URxvt.cursorUnderline: true
-URxvt.geometry: 70x20
-URxvt.font: xft: Cozette:size=10:antialias=true
-URxvt.boldFont: xft: Cozette:size=10:antialias=true
-URxvt.letterSpace: 0
+URxvt.geometry: 70x18
+URxvt.font: xft: JetBrainsMono Nerd Font:size=12
+URxvt.boldFont: xft: JetBrainsMono Nerd Font:Bold:size=12
+URxvt.letterSpace: -1
 
-XTerm*faceName: Cozette:size=9:antialias=true
+XTerm*faceName: JetBrainsMono Nerd Font:size=12:antialias=true
 
-st.font:		    Cozette
+st.font:		    JetBrainsMono Nerd Font
 st.shell:			/bin/sh
 st.chscale:			1.0
 st.cwscale:		    1.0

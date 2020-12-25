@@ -4,13 +4,13 @@ mpd_music_dir = ~/Music
 
 visualizer_type = "spectrum"
 visualizer_look = "∙│"
-visualizer_color = green
+visualizer_color = blue
 
 song_list_format = "{{%a %t}|{%f}}{$R%l}"
-current_item_prefix = $(green)$r
-current_item_inactive_column_prefix = $(white)$r
-now_playing_prefix = "$3"
-now_playing_suffix = "$9"
+current_item_prefix = $b$(blue)$r
+current_item_inactive_column_prefix = $b$(white)$r
+now_playing_prefix = "$b$5"
+now_playing_suffix = "$b$9"
 main_window_color = white
 execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
 

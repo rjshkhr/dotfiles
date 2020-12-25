@@ -7,9 +7,10 @@
 + **TERMINAL**          : Urxvt
 + **SHELL**             : Fish (interactive), Bash (login)
 + **EDITOR**            : Neovim
-+ **TERMINAL FONT**     : Cozette
-+ **BAR FONT**          : Cozette
-+ **ICON FONTS**        : Siji, Font Awesome
++ **TERMINAL FONT**     : JetBrainsMono
++ **BAR FONT**          : DejaVu Sans
++ **ICON FONTS**        : Font Awesome
++ **APP LAUNCHER**      : Rofi
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
@@ -21,7 +22,6 @@
 + **SCREEN CAPTURE**    : Scrot
 + **IMAGE VIEWER**      : Feh
 + **DOCUMENT VIEWER**   : Zathura
-+ **APP LAUNCHER**      : Dmenu
 + **RSS READER**        : Newsboat
 
 ## <p align="center">Preview</p>

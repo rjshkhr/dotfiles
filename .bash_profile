@@ -3,15 +3,17 @@
 # default programs
 export EDITOR="nvim"
 export BROWSER="firefox-bin"
+export BROWSER_P="firefox-bin -P Private"
+export BROWSER_Y="firefox-bin -P YouTube"
 export FMANAGER="ranger"
 export READER="zathura"
 
-if command -v st &> /dev/null
-then
-        export TERMINAL="st"
-elif command -v urxvt &> /dev/null
+if command -v urxvt &> /dev/null
 then
         export TERMINAL="urxvt"
+elif command -v st &> /dev/null
+then
+        export TERMINAL="st"
 elif command -v xterm &> /dev/null
 then
         export TERMINAL="xterm"
@@ -30,6 +32,10 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$HOME/.config/X11/xauthority"
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android
+export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android
+export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 
 # run bashrc
 if [[ -f ~/.bashrc ]] ; then

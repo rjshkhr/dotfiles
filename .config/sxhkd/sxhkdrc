@@ -1,23 +1,30 @@
 #!/bin/sh
 
 # terminal
-super + Return
+super + {Return, @space}
 	$TERMINAL
 
 # program launcher
-super + @space
+super + d
     run_dmenu
+
+# lockscreen
+alt + shift + l
+	slock
 
 # programs
 # variables in .bash_profile
-super + shift + {b,f,v,m,t}
+super + shift + {f,v,m,t}
     {\
-	$BROWSER,\
     $TERMINAL -e $FMANAGER,\
     $TERMINAL -e $EDITOR,\
     $TERMINAL -e ncmpcpp,\
     $TERMINAL -e rtorrent
 \}
+
+# browser profiles
+super + alt + {b,p,y}
+    {$BROWSER,$BROWSER_P,$BROWSER_Y}
 
 # scripts
 super + shift + r
@@ -60,7 +67,7 @@ super + Escape
 super + alt  + g
     bspc config window_gap 0
 super + shift + g
-    bspc config window_gap 8
+    bspc config window_gap 5
 
 # quit/restart bspwm
 super + alt + {q,r}
