@@ -5,19 +5,19 @@
 ! terminal
 
 *.scrollBar: false
-*.internalBorder: 20
+*.internalBorder: 25
 Xcursor.theme: cursor-theme
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x18
-URxvt.font: xft: JetBrainsMono Nerd Font:size=12
-URxvt.boldFont: xft: JetBrainsMono Nerd Font:Bold:size=12
-URxvt.letterSpace: -1
+URxvt.font: xft: JetBrainsMono Nerd Font:size=10
+URxvt.boldFont: xft: JetBrainsMono Nerd Font:Bold:size=10
+URxvt.letterSpace: 0
 
-XTerm*faceName: JetBrainsMono Nerd Font:size=12:antialias=true
+XTerm*faceName: JetBrainsMono Nerd Font:size=10:antialias=true
 
 st.font:		    JetBrainsMono Nerd Font
 st.shell:			/bin/sh
 st.chscale:			1.0
 st.cwscale:		    1.0
-st.borderpx:		20
+st.borderpx:		25

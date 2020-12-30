@@ -5,12 +5,12 @@
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
 + **TERMINAL**          : Urxvt
-+ **SHELL**             : Fish (interactive), Bash (login)
++ **SHELL**             : Fish
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : JetBrainsMono
 + **BAR FONT**          : DejaVu Sans
 + **ICON FONTS**        : Font Awesome
-+ **APP LAUNCHER**      : Rofi
++ **APP LAUNCHER**      : Dmenu
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger

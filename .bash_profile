@@ -2,7 +2,7 @@
 
 # default programs
 export EDITOR="nvim"
-export BROWSER="firefox-bin"
+export BROWSER="firefox-bin -P Default"
 export BROWSER_P="firefox-bin -P Private"
 export BROWSER_Y="firefox-bin -P YouTube"
 export FMANAGER="ranger"
