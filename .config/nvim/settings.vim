@@ -13,7 +13,6 @@ set undofile
 set autoindent
 set smartindent
 set history=1000
-set laststatus=2 " always display statusline
 set splitbelow splitright
 set encoding=utf-8  " text encoding
 let mapleader = " " " space is the leader key

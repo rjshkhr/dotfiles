@@ -4,7 +4,8 @@ if [[ $- != *i* ]] ; then
         return
 fi
 
-# fish as an interactive shell
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] ; then
-	exec fish
+if [ -e ~/.bash_aliases ]; then
+    source ~/.bash_aliases
 fi
+
+source /usr/share/fzf/key-bindings.bash

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 focused=$(xrdb ~/.config/X11/xresources -query all | grep color7 | cut -f2)
-normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
+normal=$(xrdb ~/.config/X11/xresources -query all | grep color1 | cut -f2)
 
 bspc monitor -d TERM WEB CODE FILES MEDIA EXTRA
 
@@ -17,7 +17,8 @@ bspc config gapless_monocle		    false
 bspc config single_monocle		    true
 
 bspc rule -a Firefox desktop='^2' follow=on
-bspc rule -a Nightly desktop='^2' follow=on
+bspc rule -a Google-chrome desktop='^2' follow=on
+# bspc rule -a Nightly desktop='^2' follow=on
 bspc rule -a mpv desktop='^5' state=fullscreen follow=on
 bspc rule -a feh state=fullscreen follow=on
 
@@ -26,3 +27,4 @@ $HOME/.config/polybar/launch.sh &
 run_dunst &
 floating_noborder &
 picom &
+syncthing &

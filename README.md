@@ -4,11 +4,11 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : Urxvt
-+ **SHELL**             : Fish
++ **TERMINAL**          : St and Urxvt
++ **SHELL**             : Bash
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : JetBrainsMono
-+ **BAR FONT**          : DejaVu Sans
++ **BAR FONT**          : Ubuntu
 + **ICON FONTS**        : Font Awesome
 + **APP LAUNCHER**      : Dmenu
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
@@ -18,9 +18,7 @@
 + **COMPOSITOR**        : [Picom](https://github.com/ibhagwan/picom)
 + **EMAIL**             : Neomutt
 + **VIDEO PLAYER**      : Mpv
-+ **SYSTEM MONITOR**    : Htop
 + **SCREEN CAPTURE**    : Scrot
-+ **IMAGE VIEWER**      : Feh
 + **DOCUMENT VIEWER**   : Zathura
 + **RSS READER**        : Newsboat
 

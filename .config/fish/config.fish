@@ -7,8 +7,7 @@ if status is-interactive
 end
 
 # aliases
-alias d "doas"
-alias sudo "doas"
+alias s "sudo"
 alias c "clear"
 alias v "nvim"
 alias vim "nvim"
@@ -21,7 +20,7 @@ alias gpl "git pull"
 alias gs "git status"
 alias ka "killall"
 alias rf "rm -rf"
-alias de "doas emerge"
+alias se "sudo emerge"
 alias e "emerge"
 alias xup "xrdb -load ~/.config/X11/xresources"
 alias installed "cat /var/lib/portage/world"

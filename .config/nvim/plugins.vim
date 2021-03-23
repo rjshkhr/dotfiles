@@ -1,11 +1,14 @@
 " plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " coc extentions
@@ -41,8 +44,18 @@ nmap <silent> gr <Plug>(coc-references)
 " symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" statusline
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
 " coc prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" emmet vim
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" gruvbox
+let g:gruvbox_italic = 1
+colorscheme gruvbox
+
+" fzf
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :GFiles<CR>

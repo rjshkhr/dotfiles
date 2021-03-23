@@ -1,23 +1,20 @@
 ! Colorscheme
 
-#include "colorschemes/blossom"
+#include "colorschemes/gruvbox"
 
 ! terminal
 
 *.scrollBar: false
-*.internalBorder: 25
-Xcursor.theme: cursor-theme
+*.internalBorder: 24
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x18
-URxvt.font: xft: JetBrainsMono Nerd Font:size=10
-URxvt.boldFont: xft: JetBrainsMono Nerd Font:Bold:size=10
-URxvt.letterSpace: 0
+URxvt.font: xft: JetBrains Mono:size=11
+URxvt.boldFont: xft: JetBrains Mono:Bold:size=11
+URxvt.letterSpace: -2
 
-XTerm*faceName: JetBrainsMono Nerd Font:size=10:antialias=true
-
-st.font:		    JetBrainsMono Nerd Font
+st.font:		    JetBrains Mono:size=11
 st.shell:			/bin/sh
 st.chscale:			1.0
-st.cwscale:		    1.0
-st.borderpx:		25
+st.cwscale:		    0.8
+st.borderpx:		24

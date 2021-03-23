@@ -4,4 +4,4 @@ export background=$(xrdb ~/.config/X11/xresources -query all | grep background |
 export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | cut -f2)
 export color4=$(xrdb ~/.config/X11/xresources -query all | grep color4 | cut -f2)
 
-dmenu_run -b -fn "JetBrains Mono Nerd Font-14" -nb "$background" -nf "$foreground" -sb "$color4" -sf "$background"
+dmenu_run -fn "JetBrains Mono Nerd Font-14" -nb "$background" -nf "$foreground" -sb "$color4" -sf "$background"

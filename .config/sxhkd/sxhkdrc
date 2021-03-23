@@ -6,7 +6,7 @@ super + {Return, @space}
 
 # program launcher
 super + d
-    run_dmenu
+    dmenu_run
 
 # lockscreen
 alt + shift + l
@@ -22,9 +22,12 @@ super + shift + {f,v,m,t}
     $TERMINAL -e rtorrent
 \}
 
-# browser profiles
-super + alt + {b,p,y}
-    {$BROWSER,$BROWSER_P,$BROWSER_Y}
+# browsers
+super + alt + f
+	$BROWSER
+
+super + alt + g
+	google-chrome-stable
 
 # scripts
 super + shift + r
