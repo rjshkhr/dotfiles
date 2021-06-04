@@ -14,9 +14,6 @@ inoremap {;<cr> {<cr>};<esc>O
 " hh == esc
 inoremap hh <esc>
 
-" ; == :
-map ; :
-
 " save and quit
 nm <leader>w :w!<cr>
 nm <leader>q :wq!<cr>
