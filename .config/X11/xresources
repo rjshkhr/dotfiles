@@ -9,12 +9,12 @@
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x18
-URxvt.font: xft: JetBrains Mono:size=11
-URxvt.boldFont: xft: JetBrains Mono:Bold:size=11
-URxvt.letterSpace: -2
+URxvt.font: xft: Iosevka Term:size=12
+URxvt.boldFont: xft: Iosevka Term:Bold:size=12
+URxvt.letterSpace: 0
 
-st.font:		    JetBrains Mono:size=11
+st.font:		    Iosevka Term:size=12
 st.shell:			/bin/sh
 st.chscale:			1.0
-st.cwscale:		    0.8
+st.cwscale:		    1.0
 st.borderpx:		24

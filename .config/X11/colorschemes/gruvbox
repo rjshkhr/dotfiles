@@ -34,9 +34,3 @@
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
-
-
-! st background and foreground
-st.background: #262626
-st.foreground: #ebdbb2
-st.cursorColor: #ebdbb2

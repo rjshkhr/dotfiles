@@ -6,7 +6,7 @@ super + {Return, @space}
 
 # program launcher
 super + d
-    dmenu_run
+    run_dmenu
 
 # lockscreen
 alt + shift + l
@@ -24,7 +24,7 @@ super + shift + {f,v,m,t}
 
 # browsers
 super + alt + f
-	$BROWSER
+	firefox-bin
 
 super + alt + g
 	google-chrome-stable
@@ -67,7 +67,7 @@ super + Escape
 #
 
 # gaps
-super + alt  + g
+super + shift + alt  + g
     bspc config window_gap 0
 super + shift + g
     bspc config window_gap 5

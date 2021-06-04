@@ -1,17 +1,18 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "Markdown",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact",
-    "json",
-    "html",
-    "css"
-  ],
-  "javascript.suggestionActions.enabled": false,
-  "prettier.singleQuote": true,
-  "prettier.useTabs": true,
-  "prettier.tabWidth": 4,
-  "prettier.disableSuccessMessage": true
+	"coc.preferences.formatOnSaveFiletypes": [
+		"Markdown",
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"javascriptreact",
+		"json",
+		"html",
+		"css"
+	],
+	"javascript.suggestionActions.enabled": false,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 2,
+	"prettier.disableSuccessMessage": true,
+	"html.autoClosingTags": true
 }

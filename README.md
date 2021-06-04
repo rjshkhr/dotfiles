@@ -7,8 +7,8 @@
 + **TERMINAL**          : St and Urxvt
 + **SHELL**             : Bash
 + **EDITOR**            : Neovim
-+ **TERMINAL FONT**     : JetBrainsMono
-+ **BAR FONT**          : Ubuntu
++ **TERMINAL FONT**     : Iosevka Term
++ **BAR FONT**          : Iosevka Term
 + **ICON FONTS**        : Font Awesome
 + **APP LAUNCHER**      : Dmenu
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
@@ -21,12 +21,6 @@
 + **SCREEN CAPTURE**    : Scrot
 + **DOCUMENT VIEWER**   : Zathura
 + **RSS READER**        : Newsboat
-
-## <p align="center">Preview</p>
-
-![screenshot](/Pictures/Screenshots/blossom1.png)
-
-![screenshot](/Pictures/Screenshots/blossom2.png)
 
 ## <p align="center">Installation</p>
 

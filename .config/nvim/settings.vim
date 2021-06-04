@@ -1,8 +1,8 @@
 syntax enable   " syntax highlighting
-set tabstop=4 " four spaces tab
+set tabstop=2 " two spaces tab
 set expandtab   " convert tabs to spaces
-set shiftwidth=4    " indents of four spaces
-set softtabstop=4   " remove tabs instead of space
+set shiftwidth=2    " indents of two spaces
+set softtabstop=2   " remove tabs instead of space
 set wrap    " wrap lines
 set showmode!   " hide current mode
 set ignorecase  " case insensitive search

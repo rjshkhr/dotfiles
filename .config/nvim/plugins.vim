@@ -8,6 +8,7 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
+" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
 call plug#end()
 
@@ -51,9 +52,15 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" gruvbox
+" " gruvbox
 let g:gruvbox_italic = 1
 colorscheme gruvbox
+
+" " dracula
+" let g:dracula_colorterm = 0
+" let g:dracula_italic = 0
+" set termguicolors
+" colorscheme dracula
 
 " fzf
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
