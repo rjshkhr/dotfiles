@@ -27,11 +27,11 @@
 ```shell
 mv ~/.config ~/.config-bak
 mv ~/.bash_profile ~/.bash_profile-bak
-mkdir -p ~/.config/ ~/Projects/ ~/Pictures/Screenshots/
+mkdir -p ~/.config/ ~/Projects
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.bashrc
 source ~/.bashrc && mv ~/.bashrc ~/.bashrc-bak
 echo "Projects/dotfiles" >> .gitignore
-git clone --bare https://www.github.com/rajshekhar26/dotfiles $HOME/Projects/dotfiles
+git clone --bare git@github.com:rajshekhar26/restaurant-page.git $HOME/Projects/dotfiles
 config checkout
 config config --local status.showUntrackedFiles no
 ```
