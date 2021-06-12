@@ -5,9 +5,9 @@ export EDITOR="nvim"
 export FMANAGER="ranger"
 export READER="zathura"
 
-if command -v st &> /dev/null
+if command -v alacritty &> /dev/null
 then
-        export TERMINAL="st"
+        export TERMINAL="alacritty"
 elif command -v urxvt &> /dev/null
 then
         export TERMINAL="urxvt"
