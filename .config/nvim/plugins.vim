@@ -48,8 +48,7 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " emmet vim
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+let g:user_emmet_mode='inv'
 
 " " gruvbox
 let g:gruvbox_italic = 1
