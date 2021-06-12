@@ -49,8 +49,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " emmet vim
 let g:user_emmet_mode='inv'
+let g:user_emmet_leader_key=','
 
-" " gruvbox
+" gruvbox
 let g:gruvbox_italic = 1
 colorscheme gruvbox
 
