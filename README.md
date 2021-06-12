@@ -4,7 +4,7 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : St and Urxvt
++ **TERMINAL**          : Alacritty and Urxvt
 + **SHELL**             : Bash
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : Iosevka Term
