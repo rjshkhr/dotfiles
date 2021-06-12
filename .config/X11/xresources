@@ -12,9 +12,3 @@ URxvt.geometry: 70x18
 URxvt.font: xft: Iosevka Term:size=12
 URxvt.boldFont: xft: Iosevka Term:Bold:size=12
 URxvt.letterSpace: -1
-
-st.font:		    Iosevka Term:size=12
-st.shell:			/bin/sh
-st.chscale:			1.0
-st.cwscale:		    1.0
-st.borderpx:		24
