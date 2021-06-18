@@ -7,8 +7,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
@@ -68,9 +67,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
 
-" " gruvbox
-" let g:gruvbox_italic = 1
-" colorscheme gruvbox
+" gruvbox
+let g:gruvbox_italic = 1
+colorscheme gruvbox
 
 " nord
 let g:nord_italic = 1
