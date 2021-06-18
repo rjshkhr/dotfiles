@@ -8,7 +8,8 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " coc extentions
@@ -17,7 +18,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-prettier',
-  \ 'coc-tsserver'
+  \ 'coc-tsserver',
   \ ]
 
 " coc tab completion
@@ -41,6 +42,22 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -51,9 +68,13 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
 
-" gruvbox
-let g:gruvbox_italic = 1
-colorscheme gruvbox
+" " gruvbox
+" let g:gruvbox_italic = 1
+" colorscheme gruvbox
+
+" nord
+let g:nord_italic = 1
+colorscheme nord
 
 " fzf
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']

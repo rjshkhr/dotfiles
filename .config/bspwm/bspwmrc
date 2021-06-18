@@ -1,6 +1,6 @@
 #!/bin/sh
 
-focused=$(xrdb ~/.config/X11/xresources -query all | grep color15 | cut -f2)
+focused=$(xrdb ~/.config/X11/xresources -query all | grep foreground | cut -f2)
 normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
 
 bspc monitor -d TERM WEB CODE FILES MEDIA EXTRA
@@ -10,7 +10,7 @@ bspc config normal_border_color		"$normal"
 bspc config border_width		    2
 bspc config window_gap 			    5
 bspc config focus_follows_pointer	false
-bspc config top_padding             34
+bspc config top_padding             38
 bspc config split_ratio			    0.52
 bspc config borderless_monocle		true
 bspc config gapless_monocle		    false

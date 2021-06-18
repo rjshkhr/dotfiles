@@ -1,6 +1,6 @@
 ! Colorscheme
 
-#include "colorschemes/gruvbox"
+#include "colorschemes/nord"
 
 ! terminal
 
