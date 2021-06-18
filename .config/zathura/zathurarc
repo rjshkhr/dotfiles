@@ -1,23 +1,23 @@
 sandbox strict
 set selection-clipboard clipboard
-set recolor
+/* set recolor */
 set page-padding 1
 set statusbar-v-padding 2
 set statusbar-h-padding 20
 
-set completion-bg           "#3c97ad"
-set completion-fg           "#232731"
-set inputbar-bg             "#3c97ad"
-set statusbar-fg            "#232731"
-set statusbar-bg            "#3c97ad"
-set recolor-lightcolor      "#232731"
-set recolor-darkcolor       "#9faab8"
-set inputbar-fg             "#232731"
-set default-bg              "#232731"
-set default-fg              "#9faab8"
-set notification-error-bg   "#b86974"
-set notification-error-fg   "#232731"
-set notification-warning-bg "#b86974"
-set notification-warning-fg "#232731"
-set completion-highlight-bg "#b86974"
-set completion-highlight-fg "#232731"
+/* set completion-bg           "#3c97ad" */
+/* set completion-fg           "#232731" */
+/* set inputbar-bg             "#3c97ad" */
+/* set statusbar-fg            "#232731" */
+/* set statusbar-bg            "#3c97ad" */
+/* set recolor-lightcolor      "#232731" */
+/* set recolor-darkcolor       "#9faab8" */
+/* set inputbar-fg             "#232731" */
+/* set default-bg              "#232731" */
+/* set default-fg              "#9faab8" */
+/* set notification-error-bg   "#b86974" */
+/* set notification-error-fg   "#232731" */
+/* set notification-warning-bg "#b86974" */
+/* set notification-warning-fg "#232731" */
+/* set completion-highlight-bg "#b86974" */
+/* set completion-highlight-fg "#232731" */
