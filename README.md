@@ -31,7 +31,7 @@ mkdir -p ~/.config/ ~/Projects
 echo 'alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"' >> $HOME/.bashrc
 source ~/.bashrc && mv ~/.bashrc ~/.bashrc-bak
 echo "Projects/dotfiles" >> .gitignore
-git clone --bare git@github.com:rajshekhar26/restaurant-page.git $HOME/Projects/dotfiles
+git clone --bare git@github.com:rajshekhar26/dotfiles.git $HOME/Projects/dotfiles
 config checkout
 config config --local status.showUntrackedFiles no
 ```
