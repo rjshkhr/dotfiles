@@ -24,7 +24,7 @@ super + shift + {f,v,m,t}
 
 # browsers
 super + alt + f
-	firefox-bin
+	firefox
 
 super + alt + g
 	google-chrome-stable
@@ -70,7 +70,7 @@ super + Escape
 super + shift + alt  + g
     bspc config window_gap 0
 super + shift + g
-    bspc config window_gap 5
+    bspc config window_gap 10
 
 # quit/restart bspwm
 super + alt + {q,r}
