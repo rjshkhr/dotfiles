@@ -6,7 +6,7 @@ super + {Return, @space}
 
 # program launcher
 super + d
-    run_dmenu
+  run_dmenu
 
 # lockscreen
 alt + shift + l
@@ -15,11 +15,11 @@ alt + shift + l
 # programs
 # variables in .bash_profile
 super + shift + {f,v,m,t}
-    {\
-    $TERMINAL -e $FMANAGER,\
-    $TERMINAL -e $EDITOR,\
-    $TERMINAL -e ncmpcpp,\
-    $TERMINAL -e rtorrent
+  {\
+  $TERMINAL -e $FMANAGER,\
+  $TERMINAL -e $EDITOR,\
+  $TERMINAL -e ncmpcpp,\
+  $TERMINAL -e rtorrent
 \}
 
 # browsers
@@ -31,32 +31,32 @@ super + alt + g
 
 # scripts
 super + shift + r
-    redshift_toggle
+  redshift_toggle
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
-    xbacklight {-inc,-dec} 5 && brightness &
+  brightnessctl s 5%{+,-} &
 
 # media keys
 XF86Audio{Next,Prev,Play,Stop}
-    mpc {next,prev,toggle,stop}
+  mpc {next,prev,toggle,stop}
 
 # volume
 XF86AudioRaiseVolume
 	pactl set-sink-volume 0 +5%
 
 XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%
+  pactl set-sink-volume 0 -5%
 
 XF86AudioMute
-    pactl set-sink-mute 0 toggle
+  pactl set-sink-mute 0 toggle
 
 # screenshot keybindings
 Print
-    scrot "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
+  scrot "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
 	notify-send "Screenshot captured"
 ctrl + Print
-    scrot -C
+  scrot -C
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -68,9 +68,9 @@ super + Escape
 
 # gaps
 super + shift + alt  + g
-    bspc config window_gap 0
+  bspc config window_gap 0
 super + shift + g
-    bspc config window_gap 10
+  bspc config window_gap 10
 
 # quit/restart bspwm
 super + alt + {q,r}

@@ -2,10 +2,7 @@
 
 [[ -f ~/.config/X11/xresources ]] && xrdb -merge -I$HOME ~/.config/X11/xresources
 [[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
-# xset +fp ~/.local/share/fonts
-# xset fp rehash
 xsetroot -cursor_name left_ptr
-xbacklight -set 40%
 mpd &
 sxhkd &
 redshift &
