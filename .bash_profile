@@ -42,6 +42,9 @@ export XAUTHORITY="$HOME/.config/X11/xauthority"
 # nodejs
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
+# npm
+export npm_config_prefix="$HOME/.local"
+
 # startx at login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx ~/.config/X11/xinitrc; fi
 
