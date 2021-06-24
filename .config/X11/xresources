@@ -1,6 +1,6 @@
 ! Colorscheme
 
-#include "colorschemes/nord"
+#include "colorschemes/dracula"
 
 ! terminal
 

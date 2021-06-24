@@ -17,7 +17,7 @@ hi Search ctermbg=0 ctermfg=7 cterm=BOLD
 hi Pmenu ctermbg=0 ctermfg=7
 hi PmenuSel ctermbg=14 ctermfg=0
 
-line numbers
+" line numbers
 hi LineNr ctermfg=8
 hi CursorLine cterm=NONE ctermbg=0
 hi CursorLineNr ctermbg=NONE ctermfg=6 cterm=BOLD

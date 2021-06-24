@@ -9,6 +9,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " coc extentions
@@ -68,12 +69,20 @@ let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
 
 " gruvbox
-let g:gruvbox_italic = 1
-colorscheme gruvbox
+" let g:gruvbox_italic = 1
+" colorscheme gruvbox
 
 " nord
-let g:nord_italic = 1
-colorscheme nord
+" let g:nord_italic = 1
+" colorscheme nord
+
+" dracula
+let g:dracula_colorterm = 0
+colorscheme dracula
+hi LineNr ctermfg=8
+hi CursorLine cterm=NONE ctermbg=8
+hi CursorLineNr ctermbg=8 ctermfg=6 cterm=BOLD
+
 
 " fzf
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
