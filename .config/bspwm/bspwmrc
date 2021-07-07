@@ -3,7 +3,7 @@
 focused=$(xrdb ~/.config/X11/xresources -query all | grep foreground | cut -f2)
 normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
 
-bspc monitor -d TERM WEB CODE FILES MEDIA EXTRA
+bspc monitor -d TERM CODE WEB FILES MEDIA EXTRA
 
 bspc config focused_border_color	"$focused"
 bspc config normal_border_color		"$normal"
@@ -16,8 +16,9 @@ bspc config borderless_monocle		true
 bspc config gapless_monocle		    false
 bspc config single_monocle		    true
 
-bspc rule -a Firefox desktop='^2' follow=on
-bspc rule -a Google-chrome desktop='^2' follow=on
+bspc rule -a code-oss desktop='^2' follow=on
+bspc rule -a firefox desktop='^3' follow=on
+bspc rule -a Google-chrome desktop='^3' follow=on
 bspc rule -a mpv desktop='^5' state=fullscreen follow=on
 bspc rule -a feh state=fullscreen follow=on
 

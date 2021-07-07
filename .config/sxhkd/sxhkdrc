@@ -4,6 +4,10 @@
 super + {Return, @space}
 	$TERMINAL
 
+# vs code
+super + shift + c
+	code-oss
+
 # program launcher
 super + d
   run_dmenu
