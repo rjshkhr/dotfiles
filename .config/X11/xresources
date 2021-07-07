@@ -1,6 +1,6 @@
 ! Colorscheme
 
-#include "colorschemes/dracula"
+#include "colorschemes/gruvbox"
 
 ! terminal
 

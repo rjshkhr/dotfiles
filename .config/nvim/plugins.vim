@@ -19,6 +19,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-prettier',
   \ 'coc-tsserver',
+  \ 'coc-eslint',
   \ ]
 
 " coc tab completion
@@ -63,6 +64,7 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " coc prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <leader>p :Prettier<cr>
 
 " emmet vim
 let g:user_emmet_mode='inv'
@@ -73,15 +75,15 @@ let g:user_emmet_leader_key=','
 " colorscheme gruvbox
 
 " nord
-" let g:nord_italic = 1
-" colorscheme nord
+let g:nord_italic = 1
+colorscheme nord
 
 " dracula
-let g:dracula_colorterm = 0
-colorscheme dracula
-hi LineNr ctermfg=8
-hi CursorLine cterm=NONE ctermbg=8
-hi CursorLineNr ctermbg=8 ctermfg=6 cterm=BOLD
+" let g:dracula_colorterm = 0
+" colorscheme dracula
+" hi LineNr ctermfg=8
+" hi CursorLine cterm=NONE ctermbg=8
+" hi CursorLineNr ctermbg=8 ctermfg=6 cterm=BOLD
 
 
 " fzf
