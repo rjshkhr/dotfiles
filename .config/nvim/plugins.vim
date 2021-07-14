@@ -70,7 +70,7 @@ nmap <leader>p :Prettier<cr>
 let g:user_emmet_mode='inv'
 let g:user_emmet_leader_key=','
 
-gruvbox
+" gruvbox
 let g:gruvbox_italic = 1
 colorscheme gruvbox
 
