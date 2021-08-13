@@ -1,0 +1,26 @@
+[user]
+	email = rjshekhar.official@gmail.com
+	name = rajshekhar26
+[init]
+	defaultBranch = main
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+
+[delta]
+  plus-style = "#ffffff bold ul brightblue"
+  minus-style = "#ffffff bold ul brightred"
+  syntax-theme = gruvbox-dark
+  side-by-side = true
+  navigate = true
+  line-numbers = true
+  line-numbers-plus-style = brightblue
+  line-numbers-minus-style = brightred
+  commit-decoration-style = bold yellow ul
+  file-style = bold yellow ul
+
+[interactive]
+  diffFilter = delta --color-only
