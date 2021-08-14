@@ -18,3 +18,4 @@ alias ka="killall"
 alias rf="rm -rf"
 alias xup="xrdb -load ~/.config/X11/xresources"
 alias ls="ls -a --group-directories-first --color=auto"
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
