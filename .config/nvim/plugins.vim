@@ -87,6 +87,7 @@ colorscheme gruvbox
 
 
 " fzf
-let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+let g:fzf_preview_window = ['right:50%:', 'ctrl-/']
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
