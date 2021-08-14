@@ -1,16 +1,16 @@
 ## <p align="center">Details</p>
 
-+ **OS**                : Gentoo
++ **OS**                : Arch
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
 + **TERMINAL**          : Alacritty and Urxvt
 + **SHELL**             : Bash
 + **EDITOR**            : Neovim
-+ **TERMINAL FONT**     : Iosevka Term
++ **TERMINAL FONT**     : JetBrains Mono
 + **BAR FONT**          : Iosevka Term
 + **ICON FONTS**        : Font Awesome
-+ **APP LAUNCHER**      : Dmenu
++ **APP LAUNCHER**      : Rofi
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
