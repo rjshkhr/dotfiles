@@ -23,3 +23,4 @@ export FZF_DEFAULT_OPTS='
 --color fg:-1,bg:-1,hl:4,fg+:15,bg+:8,hl+:12
 --color pointer:1,info:8,spinner:8,header:8,prompt:2,marker:3
 '
+eval "$(fnm env)"
