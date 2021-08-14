@@ -39,13 +39,13 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Underline
+    shape: Beam
 
     #   - Never: Prevent the cursor from ever blinking
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: off
+    blinking: on
 
   # from `0.0` to `1.0`.
   thickness: 0.25
