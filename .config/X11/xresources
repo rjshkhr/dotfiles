@@ -9,6 +9,6 @@
 
 URxvt.cursorUnderline: true
 URxvt.geometry: 70x18
-URxvt.font: xft: Iosevka Term:size=12
-URxvt.boldFont: xft: Iosevka Term:Bold:size=12
-URxvt.letterSpace: -1
+URxvt.font: xft: JetBrains Mono:size=12
+URxvt.boldFont: xft: JetBrains Mono:Bold:size=12
+URxvt.letterSpace: -2
