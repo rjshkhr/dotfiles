@@ -36,3 +36,7 @@ noremap <leader><space> <esc>:noh<cr><esc>
 
 " reload nvim config
 nmap <leader>r :so ~/.config/nvim/init.vim<cr>
+
+" buffers
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
