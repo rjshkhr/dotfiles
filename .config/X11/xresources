@@ -12,3 +12,11 @@ URxvt.geometry: 70x18
 URxvt.font: xft: JetBrains Mono:size=12
 URxvt.boldFont: xft: JetBrains Mono:Bold:size=12
 URxvt.letterSpace: -2
+
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
