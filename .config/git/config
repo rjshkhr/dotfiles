@@ -11,7 +11,7 @@
   show = delta
 
 [delta]
-  plus-style = "#ffffff bold ul brightblue"
+  plus-style = "#ffffff bold ul brightgreen"
   minus-style = "#ffffff bold ul brightred"
   syntax-theme = gruvbox-dark
   side-by-side = true
