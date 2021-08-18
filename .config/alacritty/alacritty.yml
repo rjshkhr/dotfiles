@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/gruvbox.yml
+  - ~/.config/alacritty/tokyonight.yml
 
 env:
   TERM: xterm-256color
@@ -12,7 +12,7 @@ window:
 font:
   normal:
     family: JetBrains Mono
-    style: Regular
+    style: Bold
 
   bold:
     family: JetBrains Mono
@@ -20,7 +20,7 @@ font:
 
   italic:
     family: JetBrains Mono
-    style: Italic
+    style: Bold Italic
 
   bold_italic:
     family: JetBrains Mono

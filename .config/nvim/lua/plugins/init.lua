@@ -22,7 +22,7 @@ require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
   use 'mattn/emmet-vim'
-  use 'morhetz/gruvbox'
+  use 'folke/tokyonight.nvim'
 
   use {
     'neovim/nvim-lspconfig',
