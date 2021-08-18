@@ -5,15 +5,12 @@ export EDITOR="nvim"
 export FMANAGER="ranger"
 export READER="zathura"
 
-if command -v alacritty &> /dev/null
-then
-        export TERMINAL="alacritty"
-elif command -v urxvt &> /dev/null
-then
-        export TERMINAL="urxvt"
-elif command -v xterm &> /dev/null
-then
-        export TERMINAL="xterm"
+if command -v alacritty &> /dev/null; then
+  export TERMINAL="alacritty"
+elif command -v urxvt &> /dev/null; then
+  export TERMINAL="urxvt"
+elif command -v xterm &> /dev/null; then
+  export TERMINAL="xterm"
 fi
 
 # default home directories
@@ -23,6 +20,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # bin directory
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/share/npm/bin
 
 # clean home
 
@@ -46,9 +44,11 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # startx at login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx ~/.config/X11/xinitrc; fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec startx ~/.config/X11/xinitrc
+fi
 
 # run bashrc
 if [[ -f ~/.bashrc ]] ; then
-        . ~/.bashrc
+  . ~/.bashrc
 fi
