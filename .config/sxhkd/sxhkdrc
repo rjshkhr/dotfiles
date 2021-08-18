@@ -4,17 +4,9 @@
 super + {Return, @space}
 	$TERMINAL
 
-# vs code
-super + shift + c
-	code-oss
-
 # program launcher
 super + d
   run_dmenu
-
-# lockscreen
-alt + shift + l
-	slock
 
 # programs
 # variables in .bash_profile
@@ -36,6 +28,10 @@ super + alt + g
 # scripts
 super + shift + r
   redshift_toggle
+
+ctrl + shift + l
+  lock
+
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
