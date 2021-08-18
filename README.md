@@ -4,13 +4,13 @@
 + **WM**                : Bspwm
 + **HOTKEY DAEMON**     : Sxhkd
 + **BAR**               : Polybar
-+ **TERMINAL**          : Alacritty and Urxvt
++ **TERMINAL**          : Alacritty
 + **SHELL**             : Bash
 + **EDITOR**            : Neovim
 + **TERMINAL FONT**     : JetBrains Mono
-+ **BAR FONT**          : Iosevka Term
-+ **ICON FONTS**        : Font Awesome
-+ **APP LAUNCHER**      : Rofi
++ **BAR FONT**          : Iosevka
++ **ICON FONT**         : [Symbols Nerd Font](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols/)
++ **APP LAUNCHER**      : Dmenu
 + **MUSIC PLAYER**      : Mpd, Ncmpcpp
 + **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
 + **FILE MANAGER**      : Ranger
