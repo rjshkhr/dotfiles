@@ -33,6 +33,9 @@ opt.termguicolors = true
 opt.background = 'dark'
 cmd [[colorscheme tokyonight]]
 
+-- emmet
+g.user_emmet_leader_key=','
+
 -- highlight on yank
 api.nvim_exec(
   [[
