@@ -22,7 +22,6 @@ require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
   use 'mattn/emmet-vim'
-  use 'folke/tokyonight.nvim'
 
   use {
     'neovim/nvim-lspconfig',
@@ -77,6 +76,13 @@ require('packer').startup(function()
     },
     config = function()
       require('plugins.telescope')
+    end
+  }
+
+  use {
+    'folke/tokyonight.nvim',
+    config = function()
+      require('plugins.tokyonight')
     end
   }
 

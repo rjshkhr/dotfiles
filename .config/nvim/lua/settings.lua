@@ -31,7 +31,6 @@ opt.cursorline = true
 -- colorscheme
 opt.termguicolors = true
 opt.background = 'dark'
-cmd [[colorscheme tokyonight]]
 
 -- emmet
 g.user_emmet_leader_key=','
