@@ -22,6 +22,12 @@
 + **DOCUMENT VIEWER**   : Zathura
 + **RSS READER**        : Newsboat
 
+## <p align="center">Screenshots</p>
+
+![screenshot](https://i.imgur.com/wxYaIJD.png)
+
+![screenshot](https://i.imgur.com/pLfu66t.png)
+
 ## <p align="center">Installation</p>
 
 ```shell
