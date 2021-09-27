@@ -1,47 +1,70 @@
 local api = vim.api
 local fn = vim.fn
 local map = vim.api.nvim_set_keymap
+local cmp = require'cmp'
+local luasnip = require'luasnip'
+local lspkind = require'lspkind'
 
-require('compe').setup {
-  source = {
-    path = true,
-    nvim_lsp = true,
-    buffer = true,
-    calc = false,
-    nvim_lua = false,
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = function(fallback)
+      if vim.fn.pumvisible() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true, true, true), 'n')
+      elseif luasnip.expand_or_jumpable() then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if vim.fn.pumvisible() == 1 then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
+      elseif luasnip.jumpable(-1) then
+        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
+      else
+        fallback()
+      end
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'buffer' },
+  },
+  formatting = {
+    format = function(entry, vim_item)
+      vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+
+      vim_item.menu = ({
+      buffer = "[Buffer]",
+      nvim_lsp = "[LSP]",
+      luasnip = "[LuaSnip]",
+    })[entry.source.name]
+      return vim_item
+    end
   },
 }
 
-local t = function(str)
-  return api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = fn.col('.') - 1
-    return col == 0 or fn.getline('.'):sub(col, col):match('%s') ~= nil
-end
-
-_G.tab_complete = function()
-  if fn.pumvisible() == 1 then
-    return t '<C-n>'
-  elseif check_back_space() then
-    return t '<Tab>'
-  else
-    return fn['compe#complete']()
-  end
-end
-
-_G.s_tab_complete = function()
-  if fn.pumvisible() == 1 then
-    return t '<C-p>'
-  else
-    return t '<S-Tab>'
-  end
-end
-
-map('i', '<Tab>', 'v:lua.tab_complete()', { expr = true })
-map('s', '<Tab>', 'v:lua.tab_complete()', { expr = true })
-map('i', '<S-Tab>', 'v:lua.s_tab_complete()', { expr = true })
-map('s', '<S-Tab>', 'v:lua.s_tab_complete()', { expr = true })
-map('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
-map('i', '<c-space>', 'compe#complete()', { expr = true })
+require("nvim-autopairs.completion.cmp").setup({
+  map_cr = true,
+  map_complete = true,
+  auto_select = true,
+  insert = false,
+  map_char = {
+    all = '(',
+    tex = '{'
+  }
+})

@@ -26,12 +26,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 
-  if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
-  end
+  buf_set_keymap('n', '<space>p', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
+
 end
 
 local icons = {
@@ -55,40 +51,25 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local servers = { 'tsserver' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities,
   }
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-lspconfig.html.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.cssls.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.jsonls.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.bashls.setup{}
-
-lspconfig.dockerls.setup{}
-
 lspconfig.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown' },
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css' },
   init_options = {
     linters = {
       eslint = {
         command = 'eslint_d',
-        rootPatterns = { '.git' },
+        rootPatterns = { 'package.json' },
         debounce = 100,
         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
         sourceName = 'eslint_d',
@@ -117,7 +98,7 @@ lspconfig.diagnosticls.setup {
       eslint_d = {
         command = 'eslint_d',
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-        rootPatterns = { '.git' },
+        rootPatterns = { 'package.json' },
       },
       prettier = {
         command = 'prettier',
@@ -129,12 +110,25 @@ lspconfig.diagnosticls.setup {
       javascript = 'prettier',
       javascriptreact = 'prettier',
       json = 'prettier',
-      scss = 'prettier',
-      less = 'prettier',
       typescript = 'prettier',
       typescriptreact = 'prettier',
       json = 'prettier',
-      markdown = 'prettier',
     }
   }
 }
+
+lspconfig.html.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.jsonls.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.bashls.setup{}
+lspconfig.dockerls.setup{}
+lspconfig.clangd.setup{}

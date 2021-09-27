@@ -34,11 +34,11 @@ map('n', 'j', 'gj', { noremap = true })
 map('n', 'k', 'gk', { noremap = true })
 
 -- auto close
-map('i', '"', '""<left>', { noremap = true })
-map('i', "'", "''<left>", { noremap = true })
-map('i', '(', '()<left>', { noremap = true })
-map('i', '[', '[]<left>', { noremap = true })
-cmd [[inoremap {<cr> {<cr>}<esc>O]]
+-- map('i', '"', '""<left>', { noremap = true })
+-- map('i', "'", "''<left>", { noremap = true })
+-- map('i', '(', '()<left>', { noremap = true })
+-- map('i', '[', '[]<left>', { noremap = true })
+-- cmd [[inoremap {<cr> {<cr>}<esc>O]]
 
 -- remove search highlight
 map('n', '<Leader><Space>', ':set hlsearch!<CR>', { noremap = true })
