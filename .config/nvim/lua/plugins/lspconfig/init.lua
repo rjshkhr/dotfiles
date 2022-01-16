@@ -25,8 +25,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-
-  buf_set_keymap('n', '<space>p', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
+  buf_set_keymap('n', '<space>p', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
 
 end
 
@@ -117,12 +116,18 @@ lspconfig.diagnosticls.setup {
   }
 }
 
+local html_bin = "/usr/bin/vscode-html-languageserver"
+
 lspconfig.html.setup {
   capabilities = capabilities,
+  cmd = { html_bin, "--stdio" },
 }
+
+local css_bin = "/usr/bin/vscode-css-languageserver"
 
 lspconfig.cssls.setup {
   capabilities = capabilities,
+  cmd = { css_bin, "--stdio" },
 }
 
 lspconfig.jsonls.setup {
