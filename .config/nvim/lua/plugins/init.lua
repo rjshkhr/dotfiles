@@ -38,6 +38,16 @@ require('packer').startup(function()
     end
   }
 
+  use {
+    'akinsho/bufferline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = function()
+      require('plugins.bufferline')
+    end
+  }
+
+  use 'lukas-reineke/indent-blankline.nvim'
+  use "jose-elias-alvarez/null-ls.nvim"
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'saadparwaiz1/cmp_luasnip'
@@ -104,6 +114,13 @@ require('packer').startup(function()
     requires = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('gitsigns').setup()
+    end
+  }
+
+  use {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup{}
     end
   }
 

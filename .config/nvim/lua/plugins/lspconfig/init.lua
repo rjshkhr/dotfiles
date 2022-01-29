@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>p', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
+  buf_set_keymap('n', '<space>p', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
 
@@ -56,7 +56,11 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local servers = { 'tsserver' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
+        on_attach(client, bufnr)
+    end,
     capabilities = capabilities,
   }
 end
@@ -130,8 +134,11 @@ lspconfig.cssls.setup {
   cmd = { css_bin, "--stdio" },
 }
 
+local json_bin = "/usr/bin/vscode-json-languageserver"
+
 lspconfig.jsonls.setup {
   capabilities = capabilities,
+  cmd = { json_bin, "--stdio" },
 }
 
 lspconfig.bashls.setup{}

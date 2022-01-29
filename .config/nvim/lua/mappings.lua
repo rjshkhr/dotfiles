@@ -14,9 +14,10 @@ map('n', '<c-j>', '<c-w>j', { noremap = true })
 map('n', '<c-k>', '<c-w>k', { noremap = true })
 map('n', '<c-l>', '<c-w>l', { noremap = true })
 
--- buffer navigation
+-- buffers
 map('n', '<C-n>', ':bnext<CR>', { noremap = true })
 map('n', '<C-p>', ':bprev<CR>', { noremap = true })
+map('n', '<Leader>d', ':bdelete!<CR>', { noremap = true })
 
 -- continuing indentation
 map('v', '<', '<gv', { noremap = true })

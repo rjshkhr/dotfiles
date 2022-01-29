@@ -2,8 +2,11 @@ local api = vim.api
 local fn = vim.fn
 local map = vim.api.nvim_set_keymap
 local cmp = require'cmp'
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local luasnip = require'luasnip'
 local lspkind = require'lspkind'
+
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
 cmp.setup {
   snippet = {

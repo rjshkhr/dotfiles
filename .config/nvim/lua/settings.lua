@@ -12,6 +12,7 @@ opt.hidden = true -- don't save on buffer change
 o.completeopt = "menuone,noselect" -- better completion
 opt.showmode = false
 opt.shortmess = opt.shortmess + 'c'
+opt.mouse = 'a'
 
 -- split right and bottom instead of left and top
 opt.splitbelow = true
