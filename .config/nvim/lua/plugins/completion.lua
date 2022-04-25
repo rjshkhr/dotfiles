@@ -45,6 +45,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'path' },
     { name = 'buffer' },
   },
   formatting = {
@@ -55,6 +56,7 @@ cmp.setup {
       buffer = "[Buffer]",
       nvim_lsp = "[LSP]",
       luasnip = "[LuaSnip]",
+      path = "[Path]",
     })[entry.source.name]
       return vim_item
     end

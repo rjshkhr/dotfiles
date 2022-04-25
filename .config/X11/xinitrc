@@ -5,5 +5,5 @@
 xsetroot -cursor_name left_ptr
 mpd &
 sxhkd &
-redshift &
+# redshift &
 exec bspwm

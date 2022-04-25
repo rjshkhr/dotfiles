@@ -13,6 +13,7 @@ require('nvim-treesitter.configs').setup {
   },
   ensure_installed = {
     'bash',
+    'c',
     'css',
     'cpp',
     'dockerfile',
@@ -21,6 +22,11 @@ require('nvim-treesitter.configs').setup {
     'json',
     'lua',
     'tsx',
-    'typescript'
+    'typescript',
+    'python',
+    'rust',
+    'yaml',
+    'solidity',
+    'scss'
   },
 }

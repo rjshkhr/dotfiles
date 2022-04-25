@@ -18,12 +18,21 @@ super + shift + {f,v,m,t}
   $TERMINAL -e rtorrent
 \}
 
+super + shift + n
+  networkmanager_dmenu
+
 # browsers
 super + alt + f
 	firefox
 
 super + alt + g
 	google-chrome-stable
+
+super + alt + p
+	google-chrome-stable --profile-directory="Profile 1"
+
+super + alt + w
+	google-chrome-stable --profile-directory="Profile 2"
 
 # scripts
 super + shift + r

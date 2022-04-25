@@ -5,9 +5,13 @@ env:
   TERM: xterm-256color
 
 window:
+  dimensions:
+    columns: 64
+    lines: 16
+
   padding:
-   x: 20
-   y: 20
+    x: 20
+    y: 20
 
 font:
   normal:
