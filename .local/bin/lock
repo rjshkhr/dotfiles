@@ -1,9 +1,14 @@
 #!/bin/sh
 
-export TEXT=$(xrdb ~/.config/X11/xresources -query all | grep background | cut -f2)
-export WRONG=$(xrdb ~/.config/X11/xresources -query all | grep color1 | cut -f2)
+export TEXT=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
+export WRONG=$(xrdb ~/.config/X11/xresources -query all | grep color5 | cut -f2)
 export DEFAULT=$(xrdb ~/.config/X11/xresources -query all | grep color3 | cut -f2)
 export VERIFYING=$(xrdb ~/.config/X11/xresources -query all | grep color4 | cut -f2)
+
+echo $TEXT
+echo $WRONG
+echo $DEFAULT
+echo $VERIFYING
 
 BLANK='#00000000'
 CLEAR='#00000000'

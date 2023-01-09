@@ -1,7 +1,0 @@
-#!/bin/sh
-
-export background=$(xrdb ~/.config/X11/xresources -query all | grep background | cut -f2)
-export foreground=$(xrdb ~/.config/X11/xresources -query all | grep foreground | cut -f2)
-export color4=$(xrdb ~/.config/X11/xresources -query all | grep color4 | cut -f2)
-
-dmenu_run -fn "Iosevka-16" -nb "$background" -nf "$foreground" -sb "$color4" -sf "$background"

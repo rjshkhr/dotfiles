@@ -1,4 +1,3 @@
-local cmd = vim.cmd
 local g = vim.g
 local map = vim.api.nvim_set_keymap
 
@@ -7,6 +6,7 @@ g.mapleader = ' '
 
 -- hh to escape
 map('i', 'hh', '<esc>', { noremap = true })
+map('i', 'jj', '<esc>', { noremap = true })
 
 -- window navigation
 map('n', '<c-h>', '<c-w>h', { noremap = true })
@@ -33,13 +33,6 @@ map('', ';p', '"0P', { noremap = true })
 -- screen line movement
 map('n', 'j', 'gj', { noremap = true })
 map('n', 'k', 'gk', { noremap = true })
-
--- auto close
--- map('i', '"', '""<left>', { noremap = true })
--- map('i', "'", "''<left>", { noremap = true })
--- map('i', '(', '()<left>', { noremap = true })
--- map('i', '[', '[]<left>', { noremap = true })
--- cmd [[inoremap {<cr> {<cr>}<esc>O]]
 
 -- remove search highlight
 map('n', '<Leader><Space>', ':set hlsearch!<CR>', { noremap = true })

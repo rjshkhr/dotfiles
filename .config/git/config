@@ -1,6 +1,3 @@
-[user]
-	email = rjshekhar.official@gmail.com
-	name = rajshekhar26
 [init]
 	defaultBranch = main
 
@@ -24,3 +21,6 @@
 
 [interactive]
   diffFilter = delta --color-only
+[user]
+	email = rjshekhar.official@gmail.com
+	name = rajshekhar26

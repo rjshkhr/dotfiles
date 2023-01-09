@@ -6,10 +6,19 @@ super + {Return, @space}
 
 # program launcher
 super + d
-  run_dmenu
+   rofi --no-config -no-lazy-grab -combi-modi window,run,ssh -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi -show combi
+
+# app launcher
+super + a
+  $HOME/.config/rofi/launchers/type-3/launcher.sh
+
+# powermenu
+# Uncomment and replace HandlePowerKey=poweroff with HandlePowerKey=ignore in /etc/systemd/logind.conf
+XF86PowerOff
+  $HOME/.config/rofi/powermenu/type-2/powermenu.sh
 
 # programs
-# variables in .bash_profile
+# variables in .bash_profile or .zprofile
 super + shift + {f,v,m,t}
   {\
   $TERMINAL -e $FMANAGER,\
@@ -18,8 +27,13 @@ super + shift + {f,v,m,t}
   $TERMINAL -e rtorrent
 \}
 
+# nemo file manager
 super + shift + n
-  networkmanager_dmenu
+	nemo
+
+# clipboard maanger
+super + shift + c
+  $HOME/.config/polybar/material/scripts/clipboard.sh
 
 # browsers
 super + alt + f
@@ -33,14 +47,6 @@ super + alt + p
 
 super + alt + w
 	google-chrome-stable --profile-directory="Profile 2"
-
-# scripts
-super + shift + r
-  redshift_toggle
-
-ctrl + shift + l
-  lock
-
 
 # brightness keybindings
 XF86MonBrightness{Up,Down}
@@ -62,10 +68,13 @@ XF86AudioMute
 
 # screenshot keybindings
 Print
-  scrot "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
+  escrotum "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
 	notify-send "Screenshot captured"
 ctrl + Print
-  scrot -C
+  escrotum -C
+shift + Print
+  escrotum -s "$HOME/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png" && \
+	notify-send "Screenshot captured"
 
 # make sxhkd reload its configuration files:
 super + Escape

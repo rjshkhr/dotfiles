@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/tokyonight.yml
+  - ~/.config/alacritty/nord.yml
 
 env:
   TERM: xterm-256color
@@ -15,26 +15,26 @@ window:
 
 font:
   normal:
-    family: JetBrains Mono
-    style: Bold
+    family: FantasqueSansMono Nerd Font
+    style: Normal
 
   bold:
-    family: JetBrains Mono
+    family: FantasqueSansMono Nerd Font
     style: Bold
 
   italic:
-    family: JetBrains Mono
-    style: Bold Italic
+    family: FantasqueSansMono Nerd Font
+    style: Italic
 
   bold_italic:
-    family: JetBrains Mono
+    family: FantasqueSansMono Nerd Font
     style: Bold Italic
 
   size: 12.0
 
   offset:
-   x: -2
-   y: 0
+    x: 0
+    y: 0
 
 draw_bold_text_with_bright_colors: true
 
