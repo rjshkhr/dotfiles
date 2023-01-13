@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/nord.yml
+  - ~/.config/alacritty/gruvbox.yml
 
 env:
   TERM: xterm-256color
@@ -36,8 +36,6 @@ font:
     x: 0
     y: 0
 
-draw_bold_text_with_bright_colors: true
-
 cursor:
   style:
     #   - ▇ Block
@@ -49,7 +47,7 @@ cursor:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: on
+    blinking: On
 
   # from `0.0` to `1.0`.
   thickness: 0.25

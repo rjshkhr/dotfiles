@@ -61,7 +61,7 @@ require("packer").startup(function(use)
 	use("tpope/vim-rhubarb")
 	use("lewis6991/gitsigns.nvim")
 
-	use("shaunsingh/nord.nvim") -- Theme inspired by Atom
+	use("ellisonleao/gruvbox.nvim")
 
 	-- Fancier statusline
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
@@ -141,14 +141,14 @@ require("settings")
 require("mappings")
 
 -- Set colorscheme
-vim.cmd([[colorscheme nord]])
+vim.cmd([[colorscheme gruvbox]])
 
 -- Set lualine as statusline
 -- See `:help lualine.txt`
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "nord",
+		theme = "gruvbox",
 		component_separators = "|",
 		section_separators = "",
 		globalstatus = true,

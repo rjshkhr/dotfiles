@@ -1,5 +1,5 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [pager]
   diff = delta
@@ -21,6 +21,7 @@
 
 [interactive]
   diffFilter = delta --color-only
+
 [user]
-	email = rjshekhar.official@gmail.com
-	name = rajshekhar26
+  email = rjshekhar.official@gmail.com
+  name = rajshekhar26
