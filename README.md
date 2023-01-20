@@ -1,26 +1,24 @@
 ## <p align="center">Details</p>
 
-+ **OS**                : Arch
-+ **WM**                : Bspwm
-+ **HOTKEY DAEMON**     : Sxhkd
-+ **BAR**               : Polybar
-+ **TERMINAL**          : Alacritty
-+ **SHELL**             : Bash
-+ **EDITOR**            : Neovim
-+ **TERMINAL FONT**     : JetBrains Mono
-+ **BAR FONT**          : Iosevka
-+ **ICON FONT**         : [Symbols Nerd Font](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols/)
-+ **APP LAUNCHER**      : Dmenu
-+ **MUSIC PLAYER**      : Mpd, Ncmpcpp
-+ **BROWSER**           : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
-+ **FILE MANAGER**      : Ranger
-+ **NOTIFICATION**      : Dunst
-+ **COMPOSITOR**        : [Picom](https://github.com/ibhagwan/picom)
-+ **EMAIL**             : Neomutt
-+ **VIDEO PLAYER**      : Mpv
-+ **SCREEN CAPTURE**    : Scrot
-+ **DOCUMENT VIEWER**   : Zathura
-+ **RSS READER**        : Newsboat
+- **OS** : Arch
+- **WM** : Bspwm
+- **HOTKEY DAEMON** : Sxhkd
+- **BAR** : Polybar
+- **TERMINAL** : Alacritty
+- **SHELL** : Zsh
+- **EDITOR** : Neovim
+- **TERMINAL FONT** : SpaceMono Nerd Font Mono
+- **BAR FONT** : SpaceMono Nerd Font Mono
+- **APP LAUNCHER** : Dmenu
+- **MUSIC PLAYER** : Mpd, Ncmpcpp
+- **BROWSER** : Firefox [(startpage)](https://github.com/rajshekhar26/startpage)
+- **FILE MANAGER** : Ranger, Nemo
+- **NOTIFICATION** : Dunst
+- **COMPOSITOR** : [Picom](https://github.com/ibhagwan/picom)
+- **VIDEO PLAYER** : Mpv
+- **SCREEN CAPTURE** : Maim
+- **DOCUMENT VIEWER** : Zathura
+- **CLIPBOARD MANAGER** : Greenclip
 
 ## <p align="center">Screenshots</p>
 

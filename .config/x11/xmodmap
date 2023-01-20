@@ -1,0 +1,3 @@
+! map caps lock to backspace
+clear lock
+keycode 66 = BackSpace

@@ -1,8 +1,8 @@
-! Colorscheme
+! colorscheme
 
-#include "colorschemes/gruvbox"
+#include "colorschemes/tokyonight"
 
-! terminal
+! terminal settings
 
 *.scrollBar: false
 *.internalBorder: 24

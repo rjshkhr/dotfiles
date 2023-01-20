@@ -1,0 +1,6 @@
+[[ -f ~/.config/x11/xresources ]] && xrdb -merge -I$HOME ~/.config/x11/xresources
+[[ -f ~/.config/x11/xmodmap ]] && xmodmap ~/.config/x11/xmodmap
+
+xsetroot -cursor_name left_ptr
+
+exec bspwm

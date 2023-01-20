@@ -1,0 +1,27 @@
+alias config="/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME"
+alias ls="ls --group-directories-first --human-readable --color=auto"
+alias ll="ls -la"
+alias la="ls -a"
+alias s="sudo"
+alias c="clear"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias gcl="git clone"
+alias ga="git add"
+alias gpl="git pull"
+alias gs="git status"
+alias gph="git push"
+alias gcm="git commit -m"
+alias gch="git checkout"
+alias gdf="git diff"
+alias gbr="git branch"
+alias glg="git log"
+alias ka="killall"
+alias rf="rm -rf"
+alias xup="xrdb -load ~/.config/x11/xresources"
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+alias wget="wget --hsts-file='$XDG_CACHE_HOME/wget-hsts'"
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'

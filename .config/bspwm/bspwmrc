@@ -1,31 +1,43 @@
-#!/bin/sh
+#! /usr/bin/env sh
 
-focused=$(xrdb ~/.config/X11/xresources -query all | grep color4 | cut -f2)
-normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
+color9=$(xrdb ~/.config/X11/xresources -query all | grep color9 | cut -f2)
+color0=$(xrdb ~/.config/X11/xresources -query all | grep color0 | cut -f2)
 
-bspc monitor -d 1 2 3 4 5 6
+pgrep -x sxhkd >/dev/null || sxhkd &
 
-bspc config focused_border_color	"$focused"
-bspc config normal_border_color		"$normal"
-bspc config border_width		      3
-bspc config window_gap 			      14
-bspc config focus_follows_pointer	false
-bspc config top_padding           0
-bspc config split_ratio			      0.52
-bspc config borderless_monocle		true
-bspc config gapless_monocle		    false
-bspc config single_monocle		    true
+if [[ $(xrandr -q | grep 'HDMI-1 connected') ]]; then
+    xrandr --output LVDS-1 --mode 1366x768 --rotate normal --primary --output HDMI-1 --mode 1920x1080 --rotate normal --left-of LVDS-1 &
+    bspc monitor HDMI-1 -d 1 2 3 4
+    bspc monitor LVDS-1 -d 5 6 7 8
+else
+    bspc monitor -d 1 2 3 4 5 6 7 8
+fi
 
-bspc rule -a code-oss desktop='^2' follow=on
-bspc rule -a firefox desktop='^3' follow=on
-bspc rule -a Google-chrome desktop='^3' follow=on
-bspc rule -a mpv desktop='^5' state=fullscreen follow=on
-bspc rule -a zoom desktop='^6' follow=on
+bspc config border_width 3
+bspc config window_gap 16
+
+bspc config focused_border_color "$color9"
+bspc config normal_border_color "$color0"
+
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle false
+bspc config single_monocle true
+
+bspc rule -a code-oss desktop='^1' follow=on
+bspc rule -a Chromium desktop='^2' follow=on
+bspc rule -a firefox desktop='^2' follow=on
+bspc rule -a Google-chrome desktop='^2' follow=on
+bspc rule -a zoom desktop='^4' follow=on
+bspc rule -a mpv desktop='^3' state=fullscreen follow=on
 bspc rule -a feh state=fullscreen follow=on
+bspc rule -a Screenkey manage=off
 
-$HOME/.config/polybar/launch.sh --blocks &
-./.fehbg &
-picom &
-greenclip daemon &
+$HOME/.config/polybar/launch.sh &
+# $HOME/.config/polybar/shapes/launch.sh &
 dunst &
+picom &
+~/.fehbg &
+mpd &
 nm-applet &
+greenclip daemon &

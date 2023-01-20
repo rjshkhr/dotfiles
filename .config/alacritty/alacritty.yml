@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/gruvbox.yml
+  - ~/.config/alacritty/tokyonight.yml
 
 env:
   TERM: xterm-256color
@@ -15,22 +15,22 @@ window:
 
 font:
   normal:
-    family: FantasqueSansMono Nerd Font
+    family: SpaceMono Nerd Font Mono
     style: Normal
 
   bold:
-    family: FantasqueSansMono Nerd Font
+    family: SpaceMono Nerd Font Mono
     style: Bold
 
   italic:
-    family: FantasqueSansMono Nerd Font
+    family: SpaceMono Nerd Font Mono
     style: Italic
 
   bold_italic:
-    family: FantasqueSansMono Nerd Font
+    family: SpaceMono Nerd Font Mono
     style: Bold Italic
 
-  size: 12.0
+  size: 15
 
   offset:
     x: 0
@@ -42,12 +42,7 @@ cursor:
     #   - _ Underline
     #   - | Beam
     shape: Beam
-
-    #   - Never: Prevent the cursor from ever blinking
-    #   - Off: Disable blinking by default
-    #   - On: Enable blinking by default
-    #   - Always: Force the cursor to always blink
     blinking: On
 
   # from `0.0` to `1.0`.
-  thickness: 0.25
+  thickness: 0.3
