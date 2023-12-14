@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-export background=$(xrdb ~/.config/x11/xresources -query all | grep color0 | cut -f2)
-export foreground=$(xrdb ~/.config/x11/xresources -query all | grep foreground | cut -f2)
-export color3=$(xrdb ~/.config/x11/xresources -query all | grep color3 | cut -f2)
-
-dmenu_run -i -fn "SpaceMono Nerd Font Mono-15" -nb "$background" -nf "$foreground" -sb "$color3" -sf "$background"

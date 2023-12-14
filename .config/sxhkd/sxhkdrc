@@ -2,71 +2,13 @@
 # wm independent hotkeys
 #
 
-# terminal
-super + {_, shift} + {Return, @space}
-	{$TERMINAL, $TERMINAL -e tmux}
+# terminal emulator
+super + Return
+	kitty
 
 # program launcher
-super + d
-	run_dmenu
-
-# browsers
-super + alt + p
-	google-chrome-stable --profile-directory="Default"
-
-super + alt + s
-	google-chrome-stable --profile-directory="Profile 2"
-
-super + alt + f
-	firefox
-
-# variables in .bash_profile or .zshenv
-super + shift + {f,v,m}
-	{\
-	$TERMINAL -e $FMANAGER,\
-	$TERMINAL -e $EDITOR,\
-	$TERMINAL -e ncmpcpp
-	\}
-
-# nemo file manager
-super + shift + n
-	nemo
-
-# lock screen
-alt + shift + l
-  lock
-
-# clipboard
-alt + shift + c
-  greenclip_dmenu
-
-# power menu
-XF86PowerOff
-  power_dmenu
-
-alt + shift + s
-  power_dmenu
-
-# brightness keybindings
-XF86MonBrightness{Up,Down}
-	brightnessctl s 5%{+,-} &
-
-# media keys
-XF86Audio{Next,Prev,Play,Stop}
-	mpc {next,prev,toggle,stop}
-
-# volume
-{XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	pactl set-sink-volume 0 {+,-}5%
-
-{ctrl + shift + n, ctrl + shift + p}
-	pactl set-sink-volume 0 {+,-}5%
-
-XF86AudioMute
-	pactl set-sink-mute 0 toggle
-
-{ctrl + shift + m}
-	pactl set-sink-mute 0 toggle
+super + @space
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape

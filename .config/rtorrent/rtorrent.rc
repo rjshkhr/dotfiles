@@ -1,8 +1,0 @@
-# default directory
-directory.default.set = ./Downloads/torrent
-
-# session directory
-session.path.set = ./.local/share/torrent/session
-
-# watch directory
-schedule2 = watch_directory,5,5,load.normal=./Downloads/*.torrent
