@@ -1,0 +1,7 @@
+# theme
+include themes/catppuccin-macchiato.conf
+set recolor
+set recolor-keephue
+
+# enable copy to clipboard
+set selection-clipboard clipboard

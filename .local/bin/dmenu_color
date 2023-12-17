@@ -1,0 +1,7 @@
+#!/bin/sh
+
+background="$(xrdb ~/.config/x11/xresources -query all | grep background | cut -f2)"
+foreground="$(xrdb ~/.config/x11/xresources -query all | grep foreground | cut -f2)"
+accent="$(xrdb ~/.config/x11/xresources -query all | grep color2 | cut -f2)"
+
+dmenu_run -i -fn "FantasqueSansM Nerd Font-16" -nb "$background" -nf "$foreground" -sb "$accent" -sf "$background"

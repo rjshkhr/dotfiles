@@ -1,1 +1,5 @@
+[[ -f ~/.config/x11/xresources ]] && xrdb -merge -I$HOME ~/.config/x11/xresources
+
+xsetroot -cursor_name left_ptr
+
 exec bspwm

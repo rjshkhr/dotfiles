@@ -1,22 +1,59 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 super + Return
-	kitty
+	$TERMINAL
 
 # program launcher
-super + @space
-	dmenu_run
+super + d
+	dmenu_color
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# brightness
+XF86MonBrightness{Up,Down}
+	brightnessctl s 5%{+,-}
 
-#
-# bspwm hotkeys
-#
+# volume
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	pactl set-sink-volume 0 {+,-}5%
+
+{ctrl + shift + n, ctrl + shift + p}
+	pactl set-sink-volume 0 {+,-}5%
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+{ctrl + shift + m}
+	pactl set-sink-mute 0 toggle
+
+# dunst history
+ctrl + @space
+  dunstctl history-pop
+
+# clipboard
+alt + shift + c
+  dmenu_greenclip
+
+# power menu
+XF86PowerOff
+  dmenu_power
+
+alt + shift + s
+  dmenu_power
+
+# file manager
+super + shift + r
+	$TERMINAL -e ranger
+
+super + shift + n
+	nemo
+
+# chrome
+super + alt + c
+	google-chrome-stable
+
+super + alt + d
+	google-chrome-stable --profile-directory=Default
+
+super + alt + w
+	google-chrome-stable --profile-directory=Work
 
 # quit/restart bspwm
 super + alt + {q,r}

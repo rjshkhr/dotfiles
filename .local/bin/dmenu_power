@@ -1,0 +1,16 @@
+#!/bin/sh
+
+background="$(xrdb ~/.config/x11/xresources -query all | grep background | cut -f2)"
+foreground="$(xrdb ~/.config/x11/xresources -query all | grep foreground | cut -f2)"
+accent="$(xrdb ~/.config/x11/xresources -query all | grep color9 | cut -f2)"
+
+case "$(printf "Lock\nLogout\nRestart\nShutdown\nSuspend" | dmenu \
+	-fn "FantasqueSansM Nerd Font Mono-16" -nb "$background" \
+	-nf "$foreground" -sb "$accent" -sf "$background" \
+	-i -p \
+	"Power:" -l 5)" in
+Logout) exec bspc quit ;;
+Restart) exec systemctl reboot ;;
+Shutdown) exec systemctl poweroff ;;
+Suspend) exec systemctl suspend ;;
+esac

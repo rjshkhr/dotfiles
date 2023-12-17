@@ -1,25 +1,19 @@
 ## <p align="center">Details</p>
 
-- **OS** : Arch
-- **WM** : Bspwm
-- **HOTKEY DAEMON** : Sxhkd
-- **BAR** : Polybar
-- **TERMINAL** : Kitty
-- **SHELL** : Zsh
-- **EDITOR** : Neovim
-- **TERMINAL FONT** : SpaceMono Nerd Font Mono
-- **APP LAUNCHER** : Dmenu
-- **FILE MANAGER** : Ranger, Nemo
-- **NOTIFICATION** : Dunst
-- **COMPOSITOR** : Picom
-- **SCREEN CAPTURE** : Maim
-- **CLIPBOARD MANAGER** : Greenclip
-
-## <p align="center">Screenshots</p>
-
-![screenshot](https://i.imgur.com/wxYaIJD.png)
-
-![screenshot](https://i.imgur.com/pLfu66t.png)
+-   **Operating System:** Arch Linux
+-   **Window Manager:** Bspwm
+-   **Hotkey Daemon:** Sxhkd
+-   **Compositor:** Picom
+-   **Status Bar:** Polybar
+-   **Notification Daemon:** Dunst
+-   **Clipboard Manager:** Greenclip
+-   **Terminal:** Kitty
+-   **Terminal Font:** FantasqueSansM Nerd Font
+-   **Shell:** Zsh
+-   **Dynamic Menu:** Dmenu
+-   **Text Editor:** Neovim
+-   **File Manager:** Ranger, Nemo
+-   **Document Viewer:** Zathura
 
 ## <p align="center">Installation</p>
 
