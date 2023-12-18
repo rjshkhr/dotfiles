@@ -11,7 +11,7 @@ else
 fi
 
 bspc config border_width 0 # window border width
-bspc config window_gap 24  # window gap
+bspc config window_gap 16  # window gap
 
 "$HOME/.config/polybar/launch.sh" & # status bar
 nm-applet &                         # network manager applet

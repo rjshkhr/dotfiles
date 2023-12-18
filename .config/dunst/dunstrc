@@ -12,7 +12,7 @@
     origin = top-right
 
     # offset from the origin
-    offset = 24x24
+    offset = 16x16
 
     # when an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
     progress_bar = true

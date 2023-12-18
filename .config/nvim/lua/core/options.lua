@@ -28,3 +28,4 @@ opt.wrap = false
 opt.termguicolors = true
 opt.background = "dark"
 opt.scrolloff = 10
+opt.sidescrolloff = 10
