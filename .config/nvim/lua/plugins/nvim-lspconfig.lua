@@ -88,11 +88,11 @@ local config = function()
 
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
-	local eslint = require("efmls-configs.linters.eslint")
+	local eslint_d = require("efmls-configs.linters.eslint_d")
 	local prettier_d = require("efmls-configs.formatters.prettier_d")
 	local fixjson = require("efmls-configs.formatters.fixjson")
-	local shellcheck = require("efmls-configs.linters.shellcheck")
 	local shfmt = require("efmls-configs.formatters.shfmt")
+	local black = require("efmls-configs.formatters.black")
 
 	lspconfig.efm.setup({
 		filetypes = {
@@ -123,18 +123,19 @@ local config = function()
 		settings = {
 			languages = {
 				lua = { luacheck, stylua },
-				javascript = { eslint, prettier_d },
-				javascriptreact = { eslint, prettier_d },
-				typescript = { eslint, prettier_d },
-				typescriptreact = { eslint, prettier_d },
-				svelte = { eslint, prettier_d },
-				vue = { eslint, prettier_d },
+				javascript = { eslint_d, prettier_d },
+				javascriptreact = { eslint_d, prettier_d },
+				typescript = { eslint_d, prettier_d },
+				typescriptreact = { eslint_d, prettier_d },
+				svelte = { eslint_d, prettier_d },
+				vue = { eslint_d, prettier_d },
 				html = { prettier_d },
 				css = { prettier_d },
 				markdown = { prettier_d },
 				json = { fixjson },
 				jsonc = { fixjson },
-				sh = { shellcheck, shfmt },
+				sh = { shfmt },
+				python = { black },
 			},
 		},
 	})

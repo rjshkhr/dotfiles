@@ -1,6 +1,0 @@
-! colorscheme
-#include "colorschemes/catppuccin-macchiato"
-
-! cursor
-Xcursor.theme: Catppuccin-Macchiato-Light-Cursors
-Xcursor.size: 32

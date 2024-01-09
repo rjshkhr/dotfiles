@@ -7,6 +7,7 @@ local config = function()
       "emmet_ls",
       "jsonls",
       "lua_ls",
+      "pyright",
       "tsserver",
       "tailwindcss",
     },

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. "$HOME/.cache/wal/colors.sh"
+
+greenclip print | grep . | dmenu -i -fn "FantasqueSansM Nerd Font Mono-18" \
+	-nb $color0 -nf "$color8" -sb "$color1" -sf "$color0" \
+	-i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'

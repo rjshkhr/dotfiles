@@ -21,9 +21,6 @@ require("core.autocmds")
 local plugins = "plugins"
 
 local opts = {
-	install = {
-		colorscheme = { "catppuccin" },
-	},
 	change_detection = {
 		notify = false,
 	},

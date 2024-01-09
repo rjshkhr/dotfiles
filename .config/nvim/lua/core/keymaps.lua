@@ -20,7 +20,7 @@ keymap.set("n", "<tab>", ":bnext<CR>", opts)
 keymap.set("n", "<s-tab>", ":bprev<CR>", opts)
 keymap.set("n", "<leader>x", ":bdelete!<CR>", opts)
 
--- vertical split size
+-- vertical split resize
 keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
 keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
 
@@ -31,12 +31,3 @@ keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>", opts)
 -- continuing indentation
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
-
--- move lines
-keymap.set("v", "<shift>j", ":m '>+1<CR>gv=gv")
-keymap.set("v", "<shift>k", ":m '>-2<CR>gv=gv")
-
--- save and exit
-keymap.set("n", "<leader>ww", ":up<CR>", opts)
-keymap.set("n", "<leader>wq", ":wq<CR>", opts)
-keymap.set("n", "<leader>qq", ":q!<CR>", opts)

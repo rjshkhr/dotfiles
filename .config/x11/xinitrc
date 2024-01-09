@@ -1,5 +1,5 @@
-[[ -f ~/.config/x11/xresources ]] && xrdb -merge -I$HOME ~/.config/x11/xresources
+#!/bin/sh
 
-xsetroot -cursor_name left_ptr
+[ -f ~/.config/x11/xresources ] && xrdb -merge -I"$HOME ~/.config/x11/Xresources"
 
-exec bspwm
+exec qtile start

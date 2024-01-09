@@ -9,16 +9,16 @@
     height = 300
 
     # origin of the notification window on the screen
-    origin = top-right
+    origin = bottom-right
 
     # offset from the origin
-    offset = 16x16
+    offset = 18x18
 
     # when an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
     progress_bar = true
 
     # set the progress bar height
-    progress_bar_height = 8
+    progress_bar_height = 18
 
     # set the frame width of the progress bar
     progress_bar_frame_width = 0
@@ -30,33 +30,33 @@
     progress_bar_max_width = 350
 
     # set the corner radius of the progress bar
-    progress_bar_corner_radius = 16
+    progress_bar_corner_radius = 18
 
     # vertical padding
-    padding = 24
+    padding = 18
 
     # horizontal padding
-    horizontal_padding = 24
+    horizontal_padding = 18
 
     # the distance from the text to the icon
-    text_icon_padding = 16
+    text_icon_padding = 18
 
     # width of frame around the notification window
-    frame_width = 3
+    frame_width = 0
 
     # defines color of the frame around the notification window
-    frame_color = "#F5BDE6"
+    frame_color = "#FFFFFF"
 
     # size of gap to display between notifications
-    gap_size = 16
+    gap_size = 18
 
-    font = FantasqueSansM Nerd Font 16
+    font = FantasqueSansM Nerd Font 18
 
     # the amount of extra spacing between text lines in pixels
     line_height = 1
 
-    # format of the message (<b> bold tag, %s summary, %b body, \n new line)
-    format = "<b>%s</b>\n\n%b"
+    # format of the message (<b> bold tag, %s notification summary, %b notification body, \n new line)
+    format = "<b>%s</b>\n%b"
 
     # stack together notifications with the same content
     stack_duplicates = true
@@ -71,7 +71,7 @@
     enable_recursive_icon_lookup = true
 
     # set icon theme (only used for recursive icon lookup)
-    icon_theme = "Gruvbox-Material-Dark, Adwaita"
+    icon_theme = "Papirus-Dark, Adwaita"
 
     # maximum amount of notifications kept in history
     history_length = 100
@@ -83,20 +83,19 @@
     class = Dunst
 
     # define the corner radius of the notification window
-    corner_radius = 16
+    corner_radius = 18
 
 [urgency_low]
-    background = "#24273A"
-    foreground = "#CAD3F5"
+    background = "#00000000"
+    foreground = "#FFFFFF"
     timeout = 10
 
 [urgency_normal]
-    background = "#24273A"
-    foreground = "#CAD3F5"
+    background = "#00000000"
+    foreground = "#FFFFFF"
     timeout = 10
 
 [urgency_critical]
-    background = "#24273A"
-    foreground = "#CAD3F5"
-    frame_color = "#ED8796"
+    background = "#00000000"
+    foreground = "#FFFFFF"
     timeout = 0
