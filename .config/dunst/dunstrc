@@ -3,7 +3,7 @@
     follow = keyboard
 
     # fixed width of a notification
-    width = 350
+    width = 450
 
     # maximum height of a single notification
     height = 300
@@ -27,7 +27,7 @@
     progress_bar_min_width = 150
 
     # set the maximum width of the progress bar
-    progress_bar_max_width = 350
+    progress_bar_max_width = 450
 
     # set the corner radius of the progress bar
     progress_bar_corner_radius = 18

@@ -28,9 +28,10 @@ keys = [
     Key([], "Print", lazy.spawn("flameshot gui")),
     Key([mod, "shift"], "p", lazy.spawn("flameshot gui")),
     Key([mod, "shift"], "c", lazy.spawn("dm_greenclip")),
+    Key([mod, "shift"], "s", lazy.spawn("dm_power")),
     Key([mod, "shift"], "r", lazy.spawn(f"{terminal} -e ranger")),
-    Key([mod, "mod1"], "d", lazy.spawn("brave --profile-directory=Default")),
-    Key([mod, "mod1"], "w", lazy.spawn("brave --profile-directory=Work")),
+    Key([mod, "mod1"], "d", lazy.spawn("google-chrome-stable --profile-directory=Default")),
+    Key([mod, "mod1"], "w", lazy.spawn('google-chrome-stable --profile-directory="Profile 2"')),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -110,7 +111,7 @@ layouts = [
 # widgets
 widget_defaults = dict(
     font="FantasqueSansM Nerd Font Bold",
-    fontsize=16,
+    fontsize=24,
     padding_x=0,
 )
 
@@ -134,6 +135,7 @@ battery_config = {
     "charge_char": "󰂄",
     "discharge_char": "󰁹",
     "empty_char": "󰂃",
+    "full_char": "󰁹",
     "format": "{char} {percent:2.0%}",
     "foreground": colors["color2"],
 }
@@ -141,7 +143,7 @@ battery_config = {
 backlight_config = {
     "fmt": "󰌵 {}",
     "foreground": colors["color5"],
-    "backlight_name": "intel_backlight",
+    "backlight_name": "nvidia_wmi_ec_backlight",
 }
 
 separator = {"size_percent": 0, "padding": 9}
@@ -177,7 +179,7 @@ screens = [
                 widget.Clock(**clock_config),
                 widget.Sep(**separator),
             ],
-            36,
+            46,
             background=colors["color0"],
             opacity=0.9,
         )
@@ -199,7 +201,7 @@ screens = [
                 widget.Clock(**clock_config),
                 widget.Sep(**separator),
             ],
-            36,
+            46,
             background=colors["color0"],
             opacity=0.9,
         )
