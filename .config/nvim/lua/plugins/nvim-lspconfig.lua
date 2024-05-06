@@ -86,6 +86,11 @@ local config = function()
 		capabilities = capabilities,
 	})
 
+	lspconfig.prismals.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local eslint_d = require("efmls-configs.linters.eslint_d")
