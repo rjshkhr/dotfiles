@@ -2,8 +2,7 @@ import os
 import json
 import subprocess
 
-from libqtile import hook
-from libqtile import bar, widget
+from libqtile import hook, qtile, bar, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.layout.xmonad import MonadTall
 from libqtile.layout.max import Max
@@ -30,8 +29,16 @@ keys = [
     Key([mod, "shift"], "c", lazy.spawn("dm_greenclip")),
     Key([mod, "shift"], "s", lazy.spawn("dm_power")),
     Key([mod, "shift"], "r", lazy.spawn(f"{terminal} -e ranger")),
-    Key([mod, "mod1"], "d", lazy.spawn("google-chrome-stable --profile-directory=Default")),
-    Key([mod, "mod1"], "w", lazy.spawn('google-chrome-stable --profile-directory="Profile 2"')),
+    Key(
+        [mod, "mod1"],
+        "d",
+        lazy.spawn("google-chrome-stable --profile-directory=Default"),
+    ),
+    Key(
+        [mod, "mod1"],
+        "w",
+        lazy.spawn('google-chrome-stable --profile-directory="Profile 2"'),
+    ),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -71,7 +78,7 @@ keys = [
 ]
 
 # groups
-groups = [Group(i) for i in "123456"]
+groups = [Group(f"{i+1}", label="󰏃") for i in range(6)]
 
 for i in groups:
     keys.extend(
@@ -97,21 +104,21 @@ colors = json.load(open(colors_json))["colors"]
 
 # layouts
 layout_theme = {
-    "margin": 18,
-    "border_focus": colors["color4"],
+    "margin": 24,
+    "border_focus": colors["color7"],
     "border_normal": colors["color0"],
-    "border_on_single": False,
+    "border_on_single": True,
 }
 
 layouts = [
-    MonadTall(**layout_theme, border_width=3, single_border_width=0),
-    Max(**layout_theme, border_width=0),
+    MonadTall(**layout_theme, border_width=4, single_border_width=4),
+    Max(**layout_theme, border_width=4),
 ]
 
 # widgets
 widget_defaults = dict(
-    font="FantasqueSansM Nerd Font Bold",
-    fontsize=24,
+    font="CaskaydiaCove NF Bold",
+    fontsize=20,
     padding_x=0,
 )
 
@@ -121,17 +128,19 @@ groupbox_config = {
     "highlight_method": "block",
     "spacing": 9,
     "padding_x": 9,
+    "borderwidth": 3,
     "active": colors["color5"],
     "inactive": colors["color8"],
-    "this_current_screen_border": colors["color5"],
-    "other_current_screen_border": colors["color2"],
-    "other_screen_border": colors["color2"],
-    "this_screen_border": colors["color5"],
-    "block_highlight_text_color": colors["color0"],
+    "this_current_screen_border": colors["color0"],
+    "other_current_screen_border": colors["color0"],
+    "other_screen_border": colors["color0"],
+    "this_screen_border": colors["color0"],
+    "urgent_border": colors["color0"],
+    "block_highlight_text_color": colors["color4"],
+    "disable_drag": True,
 }
 
 battery_config = {
-    "show_short_text": False,
     "charge_char": "󰂄",
     "discharge_char": "󰁹",
     "empty_char": "󰂃",
@@ -146,12 +155,61 @@ backlight_config = {
     "backlight_name": "nvidia_wmi_ec_backlight",
 }
 
+check_updates_config = {
+    "distro": "Arch_paru",
+    "fmt": "󰏕 {}",
+    "initial_text": "0",
+    "update_interval": 1800,
+    "display_format": "{updates}",
+    "foreground": colors["color6"],
+    "colour_have_updates": colors["color6"],
+    "colour_no_updates": colors["color6"],
+    "no_update_string": "0",
+    "mouse_callbacks": {
+        "Button1": lambda: qtile.cmd_spawn(
+            f"{terminal} -e sh -c 'paru -Syu && exec bash'"
+        )
+    },
+}
+
+memory_config = {
+    "format": "󰍛 {MemUsed:.0f}{mm}",
+    "foreground": colors["color1"],
+    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn(f"{terminal} -e htop")},
+}
+
+bluetooth_config = {
+    "foreground": colors["color1"],
+    "default_text": "󰂯 {connected_devices}",
+    "default_show_battery": True,
+    "device_battery_format": " {battery}%",
+    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn("blueberry")},
+}
+
+cpu_config = {
+    "format": "󰘚 {load_percent}%",
+    "foreground": colors["color3"],
+    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn(f"{terminal} -e htop")},
+}
+
+volume_config = {
+    "fmt": "󰕾 {}",
+    "foreground": colors["color4"],
+    "get_volume_command": "pactl list sinks | tr ' ' '\n' | grep -m1 '%'",
+    "check_mute_command": "pactl get-sink-mute @DEFAULT_SINK@",
+    "check_mute_string": "yes",
+    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn("pavucontrol")},
+}
+
+net_config = {
+    "format": "󰇚 {down:.2f}{down_suffix}",
+    "foreground": colors["color8"],
+    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn(f"{terminal} -e nmtui")},
+}
+
 separator = {"size_percent": 0, "padding": 9}
-current_layout_config = {"fmt": "  {}", "foreground": colors["color4"]}
-memory_config = {"format": "󰍛 {MemUsed:.0f}{mm}", "foreground": colors["color1"]}
-cpu_config = {"format": "󰘚 {load_percent}%", "foreground": colors["color3"]}
-pulse_volume_config = {"fmt": "󰕾 {}", "foreground": colors["color6"]}
-clock_config = {"format": "󱑂  %I:%M", "foreground": colors["color4"]}
+current_layout_config = {"fmt": "  {}", "foreground": colors["color3"]}
+clock_config = {"format": "󱑂 %I:%M", "foreground": colors["color4"]}
 
 screens = [
     Screen(
@@ -164,46 +222,31 @@ screens = [
                 widget.Sep(**separator),
                 widget.Prompt(),
                 widget.Spacer(),
+                widget.Sep(**separator),
                 widget.Systray(),
+                widget.Sep(**separator),
+                widget.Net(**net_config),
+                widget.Sep(**separator),
+                widget.Volume(**volume_config),
                 widget.Sep(**separator),
                 widget.Memory(**memory_config),
                 widget.Sep(**separator),
                 widget.CPU(**cpu_config),
                 widget.Sep(**separator),
-                # widget.PulseVolume(**pulse_volume_config),
-                widget.Sep(**separator),
-                widget.Battery(**battery_config),
+                widget.CheckUpdates(**check_updates_config),
                 widget.Sep(**separator),
                 widget.Backlight(**backlight_config),
                 widget.Sep(**separator),
-                widget.Clock(**clock_config),
-                widget.Sep(**separator),
-            ],
-            46,
-            background=colors["color0"],
-            opacity=0.9,
-        )
-    ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Sep(**separator),
-                widget.GroupBox(**groupbox_config),
-                widget.Sep(**separator),
-                widget.CurrentLayout(**current_layout_config),
-                widget.Spacer(),
-                widget.Memory(**memory_config),
-                widget.Sep(**separator),
-                widget.CPU(**cpu_config),
-                widget.Sep(**separator),
-                # widget.PulseVolume(**pulse_volume_config),
+                widget.Battery(**battery_config),
                 widget.Sep(**separator),
                 widget.Clock(**clock_config),
                 widget.Sep(**separator),
+                widget.Bluetooth(**bluetooth_config),
+                widget.Sep(**separator),
             ],
-            46,
+            50,
             background=colors["color0"],
-            opacity=0.9,
+            opacity=0.8,
         )
     ),
 ]
@@ -239,8 +282,8 @@ floating_layout = Floating(
         Match(title="branchdialog"),  # gitk
         Match(wm_class="feh"),
     ],
-    border_width=3,
-    border_focus=colors["color5"],
+    border_width=4,
+    border_focus=colors["color7"],
     border_normal=colors["color0"],
 )
 

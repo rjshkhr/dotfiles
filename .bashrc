@@ -79,3 +79,7 @@ shopt -s autocd
 
 # pywal colors in TTY
 . ~/.cache/wal/colors-tty.sh
+
+# fzf
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash

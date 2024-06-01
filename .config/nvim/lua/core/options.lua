@@ -7,6 +7,7 @@ opt.swapfile = false -- disable swap file
 opt.showmode = false
 opt.iskeyword:append("-") -- treat words separated by - as one word
 opt.clipboard:append("unnamedplus") -- enable copying to system clipboard
+opt.virtualedit = "block"
 
 -- splits
 opt.splitbelow = true
@@ -26,6 +27,6 @@ opt.wrap = false
 
 -- appearance
 opt.termguicolors = true
-opt.background = "light"
+opt.background = "dark"
 opt.scrolloff = 10
 opt.sidescrolloff = 10

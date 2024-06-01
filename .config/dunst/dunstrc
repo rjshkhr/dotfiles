@@ -50,7 +50,7 @@
     # size of gap to display between notifications
     gap_size = 18
 
-    font = FantasqueSansM Nerd Font 18
+    font = CaskaydiaCove NF 16
 
     # the amount of extra spacing between text lines in pixels
     line_height = 1

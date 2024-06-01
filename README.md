@@ -6,7 +6,7 @@
 - **Notification Daemon:** Dunst
 - **Clipboard Manager:** Greenclip
 - **Terminal:** Kitty
-- **Terminal Font:** FantasqueSansM Nerd Font
+- **Terminal Font:** CaskaydiaCove NF
 - **Shell:** Bash
 - **Dynamic Menu:** Dmenu
 - **Text Editor:** Neovim
@@ -21,7 +21,7 @@ mkdir -p ~/.config/ ~/Projects
 echo "alias config='/usr/bin/git --git-dir=$HOME/Projects/dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 source ~/.bashrc
 mv ~/.bashrc ~/.bashrc-bak && mv ~/.bash_profile ~/.bash_profile-bak
-git clone --bare git@github.com:rajshekhar26/dotfiles.git $HOME/Projects/dotfiles
+git clone --bare git@github.com:rjshkhr/dotfiles.git $HOME/Projects/dotfiles
 config checkout
 config config --local status.showUntrackedFiles no
 ```
