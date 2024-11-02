@@ -2,4 +2,4 @@
 
 . "$HOME/.cache/wal/colors.sh"
 
-dmenu_run -i -fn "CaskaydiaCove NF-16" -nb "$color0" -nf "$color7" -sb "$color6" -sf "$color0"
+dmenu_run -i -fn "IosevkaTerm NFM-16" -nb "$color0" -nf "$color7" -sb "$color6" -sf "$color0"

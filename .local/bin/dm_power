@@ -3,7 +3,7 @@
 . "$HOME/.cache/wal/colors.sh"
 
 case "$(echo -e "Lock\nLogout\nRestart\nShutdown\nSuspend" | dmenu \
-	-fn "CaskaydiaCove NF-16" -nb "$color0" \
+	-fn "IosevkaTerm NFM-16" -nb "$color0" \
 	-nf "$color7" -sb "$color2" -sf "$color0" \
 	-i -p \
 	"Power:" -l 5)" in

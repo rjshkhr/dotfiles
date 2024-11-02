@@ -112,13 +112,13 @@ layout_theme = {
 
 layouts = [
     MonadTall(**layout_theme, border_width=4, single_border_width=4),
-    Max(**layout_theme, border_width=4),
+    Max(**layout_theme, border_width=0),
 ]
 
 # widgets
 widget_defaults = dict(
-    font="CaskaydiaCove NF Bold",
-    fontsize=20,
+    font="IosevkaTerm NF Bold",
+    fontsize=18,
     padding_x=0,
 )
 
@@ -145,6 +145,7 @@ battery_config = {
     "discharge_char": "󰁹",
     "empty_char": "󰂃",
     "full_char": "󰁹",
+    "not_charging_char": "󰁹",
     "format": "{char} {percent:2.0%}",
     "foreground": colors["color2"],
 }
@@ -156,7 +157,7 @@ backlight_config = {
 }
 
 check_updates_config = {
-    "distro": "Arch_paru",
+    "distro": "Arch",
     "fmt": "󰏕 {}",
     "initial_text": "0",
     "update_interval": 1800,
@@ -179,7 +180,7 @@ memory_config = {
 }
 
 bluetooth_config = {
-    "foreground": colors["color1"],
+    "foreground": colors["color8"],
     "default_text": "󰂯 {connected_devices}",
     "default_show_battery": True,
     "device_battery_format": " {battery}%",
@@ -192,14 +193,7 @@ cpu_config = {
     "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn(f"{terminal} -e htop")},
 }
 
-volume_config = {
-    "fmt": "󰕾 {}",
-    "foreground": colors["color4"],
-    "get_volume_command": "pactl list sinks | tr ' ' '\n' | grep -m1 '%'",
-    "check_mute_command": "pactl get-sink-mute @DEFAULT_SINK@",
-    "check_mute_string": "yes",
-    "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn("pavucontrol")},
-}
+pulse_volume_config = {"fmt": "󰕾 {}", "foreground": colors["color4"]}
 
 net_config = {
     "format": "󰇚 {down:.2f}{down_suffix}",
@@ -209,7 +203,7 @@ net_config = {
 
 separator = {"size_percent": 0, "padding": 9}
 current_layout_config = {"fmt": "  {}", "foreground": colors["color3"]}
-clock_config = {"format": "󱑂 %I:%M", "foreground": colors["color4"]}
+clock_config = {"format": "󱑂  %I:%M", "foreground": colors["color4"]}
 
 screens = [
     Screen(
@@ -227,7 +221,7 @@ screens = [
                 widget.Sep(**separator),
                 widget.Net(**net_config),
                 widget.Sep(**separator),
-                widget.Volume(**volume_config),
+                widget.PulseVolume(**pulse_volume_config),
                 widget.Sep(**separator),
                 widget.Memory(**memory_config),
                 widget.Sep(**separator),
@@ -244,9 +238,9 @@ screens = [
                 widget.Bluetooth(**bluetooth_config),
                 widget.Sep(**separator),
             ],
-            50,
+            48,
             background=colors["color0"],
-            opacity=0.8,
+            opacity=1,
         )
     ),
 ]

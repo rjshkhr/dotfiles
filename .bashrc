@@ -23,10 +23,15 @@ export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export GOPATH="$XDG_DATA_HOME/go"
 
 # bin directories
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/npm/bin"
+export PATH="$PATH:$GOPATH"
 
 # aliases
 alias grep='grep --color=auto'
@@ -83,3 +88,10 @@ shopt -s autocd
 # fzf
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+# fnm
+eval "$(fnm env --use-on-cd)"
+
+# history
+HISTSIZE=-1
+HISTFILESIZE=-1

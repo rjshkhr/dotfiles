@@ -6,7 +6,7 @@
 - **Notification Daemon:** Dunst
 - **Clipboard Manager:** Greenclip
 - **Terminal:** Kitty
-- **Terminal Font:** CaskaydiaCove NF
+- **Terminal Font:** IosevkaTerm NFM
 - **Shell:** Bash
 - **Dynamic Menu:** Dmenu
 - **Text Editor:** Neovim
