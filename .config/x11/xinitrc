@@ -1,5 +1,0 @@
-#!/bin/sh
-
-[ -f ~/.config/x11/Xresources ] && xrdb -merge -I"$HOME ~/.config/x11/Xresources"
-
-exec qtile start
