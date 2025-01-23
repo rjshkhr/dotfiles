@@ -1,0 +1,6 @@
+! cursor
+Xcursor.theme: BreezeX-RosePineDawn-Linux
+Xcursor.size: 40
+
+! 150% scaling
+Xft.dpi: 144

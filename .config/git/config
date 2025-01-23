@@ -1,0 +1,7 @@
+[user]
+	name = rjshkhr
+	email = rjshekhar.official@gmail.com
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
