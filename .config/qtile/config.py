@@ -304,7 +304,7 @@ floating_layout = Floating(
         Match(wm_class="feh"),
     ],
     border_width=4,
-    border_focus=colors["color5"],
+    border_focus=colors["color4"],
     border_normal=colors["color0"],
 )
 
