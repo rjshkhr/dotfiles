@@ -15,15 +15,16 @@ configuration {
     background: @bg;
     background-alt: @cur;
     foreground: @fgd;
-    selected: @grn;
+    selected: @yel;
     active: @cya;
     urgent: @red;
-    border-col: @fgd;
+    border-col: @yel;
 }
 window {
     background-color: @background;
-    border-radius: 16px;
-    border: 0px;
+    border-radius: 20px;
+    border: 4px;
+    border-color: @border-col;
     width: 820px;
 }
 mainbox {
@@ -39,7 +40,7 @@ inputbar {
 }
 prompt {
     background-color: transparent;
-    text-color: @grn;
+    text-color: @yel;
     padding: 0px 8px 0px 0px;
 }
 entry {
@@ -53,7 +54,7 @@ listview {
     lines: 10;
     spacing: 4px;
     fixed-height: true;
-    border: 0;
+    border: 4px;
 }
 element {
     background-color: transparent;
@@ -70,16 +71,10 @@ element alternate.normal {
 }
 element selected.normal {
     background-color: @selected;
-    text-color: @foreground;
+    text-color: @background;
 }
 element-text {
     background-color: transparent;
     text-color: inherit;
     vertical-align: 0.5;
-}
-scrollbar {
-    handle-color: @ora;
-    handle-width: 6px;
-    border-radius: 8px;
-    handle-radius: 8px;
 }

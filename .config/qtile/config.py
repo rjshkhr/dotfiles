@@ -3,12 +3,14 @@
 import os
 import subprocess
 
-from libqtile import hook, qtile, bar, widget
+from libqtile import hook, qtile, bar
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.layout.xmonad import MonadTall
 from libqtile.layout.max import Max
 from libqtile.layout.floating import Floating
 from libqtile.lazy import lazy
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
 from colors import colors
 
 # pylint: disable=invalid-name
@@ -104,35 +106,36 @@ for i in groups:
 
 # layouts
 layout_theme = {
-    "margin": 16,
+    "margin": 12,
     "border_focus": colors["foreground"],
     "border_normal": colors["color0"],
 }
 
 layouts = [
-    MonadTall(**layout_theme, border_width=0, single_border_width=0),
-    Max(**layout_theme, border_width=0),
+    MonadTall(**layout_theme, border_width=4, single_border_width=4),
+    Max(**layout_theme, border_width=4),
 ]
 
 # widgets
 widget_defaults = {
     "font": "CaskaydiaCove NFM Bold",
     "fontsize": 16,
+    "padding": 20,
+    "decorations": [
+        RectDecoration(
+            colour=colors["background"], radius=20, filled=True, line_width=4
+        )
+    ],
 }
 
 extension_defaults = widget_defaults.copy()
 
 groupbox_config = {
-    "highlight_method": "block",
-    "spacing": 9,
-    "padding_x": 9,
-    "active": colors["color5"],
-    "inactive": colors["color8"],
-    "this_current_screen_border": colors["background"],
-    "other_current_screen_border": colors["background"],
-    "other_screen_border": colors["background"],
-    "this_screen_border": colors["background"],
-    "urgent_border": colors["color0"],
+    "borderwidth": 0,
+    "margin_x": 24,
+    "padding_x": 3,
+    "active": colors["foreground"],
+    "inactive": colors["color0"],
     "block_highlight_text_color": colors["color4"],
     "disable_drag": True,
 }
@@ -160,11 +163,14 @@ memory_config = {
 }
 
 bluetooth_config = {
-    "foreground": colors["color8"],
-    "default_text": "󰂯 {connected_devices}",
+    "default_text": " 󰂯 {connected_devices}",
+    "padding": 12,
     "default_show_battery": True,
-    "device_battery_format": " {battery}%",
+    "device_battery_format": " {battery}% ",
     "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn("blueberry")},
+    "decorations": [
+        RectDecoration(colour=colors["color1"], radius=20, filled=True, line_width=4)
+    ],
 }
 
 cpu_config = {
@@ -181,9 +187,30 @@ net_config = {
     "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn(f"{TERMINAL} -e nmtui")},
 }
 
-separator = {"size_percent": 0, "padding": 9}
-current_layout_config = {"fmt": "  {}", "foreground": colors["color3"]}
-clock_config = {"format": "󱑂  %I:%M", "foreground": colors["color4"]}
+spacer = {
+    "decorations": [RectDecoration(colour=colors["transparent"], filled=False)],
+}
+
+separator = {
+    "size_percent": 0,
+    "padding": 10,
+    "decorations": [RectDecoration(colour=colors["color0"])],
+}
+
+window_name_config = {
+    "fmt": " {}",
+    "width": 600,
+    "decorations": [
+        RectDecoration(
+            colour=colors["color6"],
+            radius=20,
+            filled=True,
+            line_width=4,
+        )
+    ],
+}
+
+clock_config = {"format": "󱑂 %I:%M", "foreground": colors["color4"]}
 
 screens = [
     Screen(
@@ -192,10 +219,9 @@ screens = [
                 widget.Sep(**separator),
                 widget.GroupBox(**groupbox_config),
                 widget.Sep(**separator),
-                widget.CurrentLayout(**current_layout_config),
+                widget.WindowName(**window_name_config),
                 widget.Sep(**separator),
-                widget.Prompt(),
-                widget.Spacer(),
+                widget.Spacer(**spacer),
                 widget.Sep(**separator),
                 widget.Net(**net_config),
                 widget.Sep(**separator),
@@ -214,9 +240,9 @@ screens = [
                 widget.Bluetooth(**bluetooth_config),
                 widget.Sep(**separator),
             ],
-            50,
-            background=colors["background"],
-            opacity=1,
+            44,
+            background=colors["transparent"],
+            margin=[8, 0, 0, 0],
         )
     ),
 ]
@@ -252,7 +278,7 @@ floating_layout = Floating(
         Match(title="branchdialog"),  # gitk
         Match(wm_class="feh"),
     ],
-    border_width=0,
+    border_width=4,
     border_focus=colors["color5"],
     border_normal=colors["color0"],
 )

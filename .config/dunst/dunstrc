@@ -12,7 +12,7 @@
     origin = bottom-right
 
     # offset from the origin
-    offset = 14x14
+    offset = 10x10
 
     # when an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
     progress_bar = true
@@ -42,10 +42,10 @@
     text_icon_padding = 16
 
     # width of frame around the notification window
-    frame_width = 0
+    frame_width = 3
 
     # defines color of the frame around the notification window
-    frame_color = "#FFFFFF"
+    frame_color = "#ea9a97"
 
     # size of gap to display between notifications
     gap_size = 12
@@ -85,7 +85,7 @@
     class = Dunst
 
     # define the corner radius of the notification window
-    corner_radius = 10
+    corner_radius = 12
 
 [urgency_low]
    background = "#232136"

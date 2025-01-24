@@ -19,15 +19,15 @@ configuration {
     background: @bg;
     background-alt: @cur;
     foreground: @fgd;
-    selected: @ora;
+    selected: @pur;
     active: @cya;
     urgent: @red;
-    border-col: @fgd;
+    border-col: @pur;
 }
 window {
     background-color: @background;
-    border-radius: 16px;
-    border: 0px;
+    border-radius: 20px;
+    border: 4px;
     border-color: @border-col;
     width: 820px;
 }
