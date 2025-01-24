@@ -1,0 +1,99 @@
+configuration {
+    display-drun: "";
+    drun-display-format: "{name}";
+    show-icons: true;
+    font: "CaskaydiaCove NFM Bold 16";
+    icon-theme: "BreezeX-RosePineDawn-Linux";
+}
+* {
+    bg: #232136;
+    cur: #393552;
+    fgd: #e0def4;
+    cmt: #6e6a86;
+    cya: #9ccfd8;
+    grn: #3e8fb0;
+    ora: #ea9a97;
+    pur: #c4a7e7;
+    red: #eb6f92;
+    yel: #f6c177;
+    background: @bg;
+    background-alt: @cur;
+    foreground: @fgd;
+    selected: @ora;
+    active: @cya;
+    urgent: @red;
+    border-col: @fgd;
+}
+window {
+    background-color: @background;
+    border-radius: 16px;
+    border: 0px;
+    border-color: @border-col;
+    width: 820px;
+}
+mainbox {
+    background-color: transparent;
+    padding: 24px;
+}
+inputbar {
+    children: [prompt, entry];
+    background-color: @background-alt;
+    border-radius: 48px;
+    padding: 12px;
+    margin: 0px 0px 16px 0px;
+}
+prompt {
+    background-color: transparent;
+    text-color: @grn;
+    padding: 0px 8px 0px 0px;
+    font: "CaskaydiaCove NFM 14";
+}
+entry {
+    background-color: transparent;
+    text-color: @fgd;
+    placeholder: "Search...";
+    placeholder-color: @cmt;
+}
+listview {
+    background-color: transparent;
+    columns: 3;
+    lines: 3;
+    spacing: 16px;
+    fixed-height: true;
+    fixed-columns: true;
+    border: 0;
+}
+element {
+    background-color: transparent;
+    orientation: vertical;
+    padding: 20px 10px;
+    border-radius: 16px;
+}
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+element alternate.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+element selected.normal {
+    background-color: @selected;
+    text-color: @background;
+}
+element-icon {
+    background-color: transparent;
+    size: 60px;
+    horizontal-align: 0.5;
+    padding: 0px 0px 8px 0px;
+}
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    padding: 0px;
+}
+scrollbar {
+    handle-color: @ora;
+}

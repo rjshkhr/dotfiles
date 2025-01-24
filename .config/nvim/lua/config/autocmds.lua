@@ -14,3 +14,12 @@ vim.api.nvim_exec(
 -- remove all white spaces at the end of the file on save
 vim.cmd([[au BufWritePre * %s/\s\+$//e]])
 vim.cmd([[au BufWritePre * %s/\n\+\%$//e]])
+
+-- terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.cmd("startinsert")
+	end,
+})

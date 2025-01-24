@@ -24,10 +24,14 @@ keymap.set("n", "<leader>x", ":bdelete!<CR>", opts)
 keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
 keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
 
--- nvim tree
-keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", opts)
-keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>", opts)
+-- oil
+keymap.set("n", "<leader>ee", ":Oil<CR>", opts)
+keymap.set("n", "<leader>ef", ':lua require("oil").toggle_float()<CR>', opts)
 
 -- continuing indentation
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
+
+-- terminal
+vim.keymap.set("n", "<leader>t", ":botright 10split | terminal<CR>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>") -- escape terminal mode

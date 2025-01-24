@@ -27,3 +27,14 @@ opt.wrap = true
 opt.termguicolors = true
 opt.scrolloff = 10
 opt.sidescrolloff = 10
+
+-- set window borders: keep horizontal lines (─), remove vertical ones
+vim.opt.fillchars:append({
+	horiz = "─",
+	horizup = "─",
+	horizdown = "─",
+	vert = " ",
+	vertleft = " ",
+	vertright = " ",
+	verthoriz = "─",
+})

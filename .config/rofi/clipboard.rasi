@@ -1,0 +1,85 @@
+configuration {
+    font: "CaskaydiaCove NFM 16";
+}
+* {
+    bg: #232136;
+    cur: #393552;
+    fgd: #e0def4;
+    cmt: #6e6a86;
+    cya: #9ccfd8;
+    grn: #3e8fb0;
+    ora: #ea9a97;
+    pur: #c4a7e7;
+    red: #eb6f92;
+    yel: #f6c177;
+    background: @bg;
+    background-alt: @cur;
+    foreground: @fgd;
+    selected: @grn;
+    active: @cya;
+    urgent: @red;
+    border-col: @fgd;
+}
+window {
+    background-color: @background;
+    border-radius: 16px;
+    border: 0px;
+    width: 820px;
+}
+mainbox {
+    background-color: transparent;
+    padding: 16px;
+}
+inputbar {
+    children: [prompt, entry];
+    background-color: @background-alt;
+    border-radius: 48px;
+    padding: 12px;
+    margin: 0px 0px 16px 0px;
+}
+prompt {
+    background-color: transparent;
+    text-color: @grn;
+    padding: 0px 8px 0px 0px;
+}
+entry {
+    background-color: transparent;
+    text-color: @fgd;
+    placeholder: "Search clipboard...";
+    placeholder-color: @cmt;
+}
+listview {
+    background-color: transparent;
+    lines: 10;
+    spacing: 4px;
+    fixed-height: true;
+    border: 0;
+}
+element {
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 16px;
+}
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+element alternate.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+}
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+scrollbar {
+    handle-color: @ora;
+    handle-width: 6px;
+    border-radius: 8px;
+    handle-radius: 8px;
+}

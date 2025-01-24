@@ -1,0 +1,106 @@
+[global]
+    # defines where the notifications should be placed in a multi-monitor setup
+    follow = keyboard
+
+    # fixed width of a notification
+    width = 450
+
+    # maximum height of a single notification
+    height = 300
+
+    # origin of the notification window on the screen
+    origin = bottom-right
+
+    # offset from the origin
+    offset = 14x14
+
+    # when an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
+    progress_bar = true
+
+    # set the progress bar height
+    progress_bar_height = 18
+
+    # set the frame width of the progress bar
+    progress_bar_frame_width = 0
+
+    # set the minimum width of the progress bar
+    progress_bar_min_width = 150
+
+    # set the maximum width of the progress bar
+    progress_bar_max_width = 450
+
+    # set the corner radius of the progress bar
+    progress_bar_corner_radius = 16
+
+    # vertical padding
+    padding = 24
+
+    # horizontal padding
+    horizontal_padding = 24
+
+    # the distance from the text to the icon
+    text_icon_padding = 16
+
+    # width of frame around the notification window
+    frame_width = 0
+
+    # defines color of the frame around the notification window
+    frame_color = "#FFFFFF"
+
+    # size of gap to display between notifications
+    gap_size = 12
+
+    font = CaskaydiaCove NFM 13
+
+    # the amount of extra spacing between text lines in pixels
+    line_height = 1.5
+
+    # format of the message (<b> bold tag, %s notification summary, %b notification body, \n new line)
+    format = "<b>%s</b>\n%b"
+
+    # stack together notifications with the same content
+    stack_duplicates = true
+
+    # don't hide the count of stacked notifications with the same content
+    hide_duplicate_count = true
+
+    # show an indicator if a notification contains actions and/or open-able URLs
+    show_indicators = false
+
+    # this setting enables the new icon lookup method (required for icon_theme)
+    enable_recursive_icon_lookup = true
+
+    # set icon theme (only used for recursive icon lookup)
+    icon_theme = "BreezeX-RosePineDawn-Linux, Papirus-Dark, Adwaita"
+    min_icon_size = 32
+    max_icon_size = 48
+
+    # maximum amount of notifications kept in history
+    history_length = 100
+
+    # define the title of the windows spawned by dunst
+    title = Dunst
+
+    # define the class of the windows spawned by dunst
+    class = Dunst
+
+    # define the corner radius of the notification window
+    corner_radius = 10
+
+[urgency_low]
+   background = "#232136"
+   foreground = "#e0def4"
+   highlight = "#3e8fb0"
+   timeout = 10
+
+[urgency_normal]
+   background = "#232136"
+   foreground = "#e0def4"
+   highlight = "#ea9a97"
+   timeout = 10
+
+[urgency_critical]
+   background = "#232136"
+   foreground = "#e0def4"
+   highlight = "#eb6f92"
+   timeout = 0

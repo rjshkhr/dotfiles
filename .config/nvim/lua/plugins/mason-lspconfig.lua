@@ -9,7 +9,6 @@ local config = function()
 			"pyright",
 			"ts_ls",
 			"tailwindcss",
-			"rust_analyzer",
 		},
 
 		automatic_installation = true,
