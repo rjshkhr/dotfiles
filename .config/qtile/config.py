@@ -24,7 +24,7 @@ keys = [
     Key(
         [MOD],
         "r",
-        lazy.spawn("rofi -show drun -theme ~/.config/rofi/drun.rasi"),
+        lazy.spawn("rofi -show drun -p '' -theme ~/.config/rofi/drun.rasi"),
         desc="Rofi Drun",
     ),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +5%")),
@@ -43,9 +43,15 @@ keys = [
         ),
     ),
     Key([MOD, "shift"], "r", lazy.spawn(f"{TERMINAL} -e ranger")),
-    Key([MOD, "shift"], "w", lazy.spawn("google-chrome-stable")),
-    Key([MOD, "shift"], "p", lazy.spawn("firefox")),
+    Key([MOD, "mod1"], "w", lazy.spawn("google-chrome-stable")),
+    Key([MOD, "mod1"], "p", lazy.spawn("firefox")),
     Key([MOD, "shift"], "n", lazy.spawn("nemo")),
+    Key(
+        [MOD, "shift"],
+        "w",
+        lazy.spawn(["/bin/bash", os.path.expanduser("~/.local/bin/wifi-menu")]),
+        desc="WiFi menu",
+    ),
     Key([MOD], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([MOD], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([MOD], "j", lazy.layout.down(), desc="Move focus down"),
@@ -147,7 +153,7 @@ battery_config = {
     "full_char": "󰁹",
     "not_charging_char": "󰁹",
     "format": "{char} {percent:2.0%}",
-    "foreground": colors["color2"],
+    "foreground": colors["color6"],
 }
 
 backlight_config = {
@@ -169,7 +175,7 @@ bluetooth_config = {
     "device_battery_format": " {battery}% ",
     "mouse_callbacks": {"Button1": lambda: qtile.cmd_spawn("blueberry")},
     "decorations": [
-        RectDecoration(colour=colors["color1"], radius=20, filled=True, line_width=4)
+        RectDecoration(colour=colors["color2"], radius=20, filled=True, line_width=4)
     ],
 }
 
@@ -202,7 +208,7 @@ window_name_config = {
     "width": 600,
     "decorations": [
         RectDecoration(
-            colour=colors["color6"],
+            colour=colors["color1"],
             radius=20,
             filled=True,
             line_width=4,
@@ -211,6 +217,23 @@ window_name_config = {
 }
 
 clock_config = {"format": "󱑂 %I:%M", "foreground": colors["color4"]}
+
+wifi_config = {
+    "decorations": [
+        RectDecoration(
+            colour=colors["color5"],
+            radius=20,
+            filled=True,
+            line_width=4,
+        )
+    ],
+    "text": "󰤨",
+    "mouse_callbacks": {
+        "Button1": lambda: qtile.cmd_spawn(
+            "/bin/bash " + os.path.expanduser("~/.local/bin/wifi-menu")
+        )
+    },
+}
 
 screens = [
     Screen(
@@ -238,6 +261,8 @@ screens = [
                 widget.Clock(**clock_config),
                 widget.Sep(**separator),
                 widget.Bluetooth(**bluetooth_config),
+                widget.Sep(**separator),
+                widget.TextBox(**wifi_config),
                 widget.Sep(**separator),
             ],
             44,

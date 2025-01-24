@@ -1,0 +1,26 @@
+#!/bin/bash
+
+notify() {
+   notify-send "WiFi" "$1" -u normal
+}
+
+connect_wifi() {
+   local ssid="$1"
+   local security="$2"
+
+   if [[ "$security" == "--" ]]; then
+       nmcli device wifi connect "$ssid" && notify "Connected to $ssid"
+   else
+       local pass=$(rofi -dmenu -p "Password" -password -theme ~/.config/rofi/wifi-menu.rasi)
+       [[ -z "$pass" ]] && exit
+       nmcli connection add type wifi con-name "$ssid" ssid "$ssid" wifi-sec.key-mgmt wpa-psk wifi-sec.psk "$pass" && \
+       nmcli connection up "$ssid" && notify "Connected to $ssid"
+   fi
+}
+
+selected=$(nmcli -f SSID,BARS,SECURITY device wifi list | tail -n +2 | sed 's/  */ /g' | \
+         rofi -dmenu -i -p "Wifi" -theme ~/.config/rofi/wifi-menu.rasi)
+[[ -z "$selected" ]] && exit
+
+read ssid bars security <<< "$selected"
+connect_wifi "$ssid" "$security"

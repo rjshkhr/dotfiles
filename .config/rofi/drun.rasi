@@ -33,7 +33,7 @@ window {
 }
 mainbox {
     background-color: transparent;
-    padding: 24px;
+    padding: 16px;
 }
 inputbar {
     children: [prompt, entry];
@@ -46,7 +46,6 @@ prompt {
     background-color: transparent;
     text-color: @grn;
     padding: 0px 8px 0px 0px;
-    font: "CaskaydiaCove NFM 14";
 }
 entry {
     background-color: transparent;
