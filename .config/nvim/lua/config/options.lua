@@ -1,34 +1,34 @@
 local opt = vim.opt
 
-opt.ignorecase = true -- case insensitive search
-opt.smartcase = true -- case sensitive when uppercase
-opt.undofile = true -- enable undo file
-opt.swapfile = false -- disable swap file
+opt.ignorecase = true -- Case insensitive search
+opt.smartcase = true -- Case sensitive when uppercase
+opt.undofile = true -- Enable undo file
+opt.swapfile = false -- Disable swap file
 opt.showmode = false
-opt.iskeyword:append("-") -- treat words separated by - as one word
-opt.clipboard:append("unnamedplus") -- enable copying to system clipboard
+opt.iskeyword:append("-") -- Treat words separated by - as one word
+opt.clipboard:append("unnamedplus") -- Enable copying to system clipboard
 
--- splits
+-- Splits
 opt.splitbelow = true
 opt.splitright = true
 
--- indentation
+-- Indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 
--- lines
+-- Lines
 opt.number = true
 opt.relativenumber = true
-opt.wrap = true
+opt.wrap = false
+opt.cursorline = true
 
--- appearance
-opt.termguicolors = true
+-- Appearance
 opt.scrolloff = 10
 opt.sidescrolloff = 10
 
--- set window borders: keep horizontal lines (─), remove vertical ones
+-- Set window borders: keep horizontal lines (─), remove vertical ones
 vim.opt.fillchars:append({
 	horiz = "─",
 	horizup = "─",

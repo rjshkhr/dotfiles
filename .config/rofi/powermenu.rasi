@@ -3,16 +3,20 @@
 * {
     background-color: @color0;
     text-color: @foreground;
-    accent-color: @color2;
+    accent-color: @color1;
 }
 
 configuration {
+    icon-theme: "Papirus-Dark";
+    display-drun: "";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
     font: "CaskaydiaCove Nerd Font Bold 16";
 }
 
 window {
-    width: 650px;
-    height: 560px;
+    width: 350px;
+    height: 415px;
     border: 0;
     border-radius: 24px;
 }
@@ -22,16 +26,7 @@ mainbox {
 }
 
 inputbar {
-    padding: 16px;
-}
-
-entry {
-    placeholder: "  Search...";
-    placeholder-color: @color8;
-}
-
-listview {
-    spacing: 24px;
+    enabled: false;
 }
 
 listview {
@@ -45,7 +40,11 @@ element {
 
 element selected {
     background-color: @accent-color;
-    text-color: @background-color;
+}
+
+element-icon {
+    background-color: transparent;
+    vertical-algign: 0.5;
 }
 
 element-text {

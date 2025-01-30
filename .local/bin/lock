@@ -1,0 +1,34 @@
+#!/bin/bash
+background=$(xrdb -query | grep -oP 'background:\s*\K#\w+' | tr -d '#')
+foreground=$(xrdb -query | grep -oP 'foreground:\s*\K#\w+' | tr -d '#')
+blue=$(xrdb -query | grep -oP 'color4:\s*\K#\w+' | tr -d '#')
+red=$(xrdb -query | grep -oP 'color1:\s*\K#\w+' | tr -d '#')
+green=$(xrdb -query | grep -oP 'color2:\s*\K#\w+' | tr -d '#')
+
+i3lock \
+  --clock \
+  --blur 5 \
+  --inside-color="${background}99" \
+  --ring-color="${foreground}99" \
+  --line-uses-inside \
+  --keyhl-color="${blue}99" \
+  --bshl-color="${red}99" \
+  --separator-color="00000000" \
+  --insidever-color="${green}99" \
+  --ringver-color="${foreground}99" \
+  --insidewrong-color="${red}99" \
+  --ringwrong-color="${foreground}99" \
+  --radius=120 \
+  --ring-width=4 \
+  --verif-text="" \
+  --wrong-text="" \
+  --noinput-text="" \
+  --lock-text="" \
+  --lockfailed-text="" \
+  --time-str="%H:%M" \
+  --date-str="%A, %d %B" \
+  --time-color="${foreground}ff" \
+  --date-color="${foreground}ff" \
+  --time-size=60 \
+  --date-size=16 \
+  -f

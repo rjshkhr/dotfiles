@@ -1,6 +1,6 @@
-vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]]) -- disable new line comments
+vim.cmd([[au BufEnter * set fo-=c fo-=r fo-=o]]) -- Disable new line comments
 
--- highlight on yank
+-- Highlight on yank
 vim.api.nvim_exec(
 	[[
   augroup YankHighlight
@@ -11,11 +11,11 @@ vim.api.nvim_exec(
 	false
 )
 
--- remove all white spaces at the end of the file on save
+-- Remove all white spaces at the end of the file on save
 vim.cmd([[au BufWritePre * %s/\s\+$//e]])
 vim.cmd([[au BufWritePre * %s/\n\+\%$//e]])
 
--- terminal
+-- Terminal
 vim.api.nvim_create_autocmd("TermOpen", {
 	callback = function()
 		vim.opt_local.number = false

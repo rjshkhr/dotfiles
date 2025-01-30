@@ -11,5 +11,11 @@ return {
 				max_width = 60,
 			},
 		})
+
+		local keymap = vim.keymap
+		local opts = { noremap = true, silent = true }
+
+		keymap.set("n", "<leader>ee", ":Oil<CR>", opts)
+		keymap.set("n", "<leader>ef", ':lua require("oil").toggle_float()<CR>', opts)
 	end,
 }

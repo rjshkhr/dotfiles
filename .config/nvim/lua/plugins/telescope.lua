@@ -1,5 +1,11 @@
 local config = function()
-	require("telescope").setup({})
+	local telescope = require("telescope")
+
+	telescope.setup({
+		defaults = {
+			borderchars = { "" },
+		},
+	})
 end
 
 return {

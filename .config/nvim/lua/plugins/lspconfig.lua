@@ -43,18 +43,6 @@ local config = function()
 		},
 	})
 
-	lspconfig.ts_ls.setup({
-		on_attach = on_attach,
-		capabalities = capabilities,
-	})
-
-	lspconfig.tailwindcss.setup({})
-
-	lspconfig.jsonls.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
-
 	lspconfig.pyright.setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
@@ -68,20 +56,17 @@ local config = function()
 		},
 	})
 
-	lspconfig.bashls.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+	local servers = {
+		"ts_ls",
+		"bashls",
+	}
 
-	lspconfig.dockerls.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
-
-	lspconfig.prismals.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+	for _, a in ipairs(servers) do
+		require("lspconfig")[a].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+	end
 end
 
 return {

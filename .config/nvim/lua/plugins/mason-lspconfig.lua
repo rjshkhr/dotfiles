@@ -1,14 +1,10 @@
 local config = function()
 	require("mason-lspconfig").setup({
 		ensure_installed = {
-			"bashls",
-			"dockerls",
-			"jsonls",
 			"lua_ls",
-			"prismals",
 			"pyright",
+			"bashls",
 			"ts_ls",
-			"tailwindcss",
 		},
 
 		automatic_installation = true,
