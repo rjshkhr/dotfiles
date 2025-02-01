@@ -10,7 +10,7 @@
 
 ![Screenshot 1](https://imgur.com/tpvx2kl.png)
 
-![Screenshot 2](https://imgur.com/rQ1LPIN.png)
+![Screenshot 2](https://imgur.com/NrzShQT.png)
 
 ![Screenshot 3](https://imgur.com/48InAod.png)
 
