@@ -7,7 +7,7 @@ green=$(xrdb -query | grep -oP 'color2:\s*\K#\w+' | tr -d '#')
 
 i3lock \
   --clock \
-  --blur 5 \
+  --blur 24 \
   --inside-color="${background}99" \
   --ring-color="${foreground}99" \
   --line-uses-inside \

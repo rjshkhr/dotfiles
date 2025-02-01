@@ -12,7 +12,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 12x56
+    offset = 9x46
 
     # When an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
     progress_bar = true
@@ -72,7 +72,7 @@
 
     min_icon_size = 32
     max_icon_size = 96
-    icon_corner_radius = 14
+    icon_corner_radius = 10
 
     # Maximum amount of notifications kept in history
     history_length = 100
@@ -84,19 +84,19 @@
     class = Dunst
 
     # Define the corner radius of the notification window
-    corner_radius = 14
+    corner_radius = 10
 
 [urgency_low]
    background = "#363E4C"
-   foreground = "#fcfcfc"
+   foreground = "#FCFCFC"
    timeout = 10
 
 [urgency_normal]
    background = "#363E4C"
-   foreground = "#fcfcfc"
+   foreground = "#FCFCFC"
    timeout = 10
 
 [urgency_critical]
    background = "#363E4C"
-   foreground = "#fcfcfc"
+   foreground = "#FCFCFC"
    timeout = 0

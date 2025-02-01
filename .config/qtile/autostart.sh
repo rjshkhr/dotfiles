@@ -22,7 +22,7 @@ setxkbmap -option caps:escape
 xset s 300
 
 # Lock on blank
-xss-lock -- lock &
+xss-lock -- ~/.local/bin/lock &
 
 # Suspend - 15 min
 xidlehook --timer 900 'systemctl suspend' '' &

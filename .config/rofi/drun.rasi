@@ -1,65 +1,42 @@
-@import "colors.rasi"
+@import "common.rasi"
 
 * {
-    background-color: @color0;
-    text-color: @foreground;
-    accent-color: @color4;
+  accent-color: @color4;
 }
 
 configuration {
-    icon-theme: "Papirus-Dark";
-    display-drun: "";
-    drun-display-format: "{icon} {name}";
-    show-icons: true;
-    font: "CaskaydiaCove Nerd Font Bold 16";
+  display-drun: "";
+  drun-display-format: "{icon} {name}";
+  show-icons: true;
 }
 
 window {
-    width: 800px;
-    height: 560px;
-    border: 0;
-    border-radius: 24px;
-}
-
-mainbox {
-    padding: 16px;
-}
-
-inputbar {
-    padding: 16px;
+  width: 800px;
+  location: northwest;
+  y-offset: 68;
+  x-offset: 12;
 }
 
 entry {
-    placeholder: "  Search...";
-    placeholder-color: @color8;
+  placeholder: "  Search...";
 }
 
 listview {
-    columns: 3;
-    lines: 9;
-    padding: 8px;
-    spacing: 24px;
+  columns: 3;
+  lines: 3;
 }
 
 element {
-    orientation: vertical;
-    padding: 20px;
-    border-radius: 24px;
-}
-
-element selected {
-    background-color: @accent-color;
+  orientation: vertical;
+  border-radius: 24px;
+  padding: 30px;
 }
 
 element-icon {
-    background-color: transparent;
-    size: 60px;
-    horizontal-align: 0.5;
-    padding: 0px 0px 8px 0px;
+  size: 60px;
+  padding: 0px 0px 12px 0px;
 }
 
 element-text {
-    background-color: transparent;
-    horizontal-align: 0.5;
-    vertical-align: 0.5;
+  horizontal-align: 0.5;
 }

@@ -1,0 +1,20 @@
+@import "common.rasi"
+
+* {
+  accent-color: @color2;
+}
+
+window {
+  width: 600px;
+  location: northeast;
+  x-offset: -68;
+  y-offset: 68;
+}
+
+entry {
+  placeholder: "  Network...";
+}
+
+listview {
+  lines: 10;
+}

@@ -1,53 +1,20 @@
-@import "colors.rasi"
+@import "common.rasi"
 
 * {
-    background-color: @color0;
-    text-color: @foreground;
-    accent-color: @color1;
-}
-
-configuration {
-    icon-theme: "Papirus-Dark";
-    display-drun: "";
-    drun-display-format: "{icon} {name}";
-    show-icons: true;
-    font: "CaskaydiaCove Nerd Font Bold 16";
+  accent-color: @color1;
 }
 
 window {
-    width: 350px;
-    height: 415px;
-    border: 0;
-    border-radius: 24px;
-}
-
-mainbox {
-    padding: 16px;
+  width: 300px;
+  location: northeast;
+  x-offset: -12;
+  y-offset: 68;
 }
 
 inputbar {
-    enabled: false;
+  enabled: false;
 }
 
 listview {
-    spacing: 24px;
-}
-
-element {
-    border-radius: 16px;
-    padding: 16px;
-}
-
-element selected {
-    background-color: @accent-color;
-}
-
-element-icon {
-    background-color: transparent;
-    vertical-algign: 0.5;
-}
-
-element-text {
-    background-color: transparent;
-    vertical-algign: 0.5;
+  lines: 5;
 }

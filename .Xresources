@@ -6,9 +6,9 @@ Xcursor.size: 32
 Xft.dpi: 144
 
 ! Blossom colors
-*.foreground:   #fcfcfc
+*.foreground:   #FCFCFC
 *.background:   #212630
-*.cursorColor:  #fcfcfc
+*.cursorColor:  #FCFCFC
 
 *.color0:       #272B36
 *.color8:       #565B6A

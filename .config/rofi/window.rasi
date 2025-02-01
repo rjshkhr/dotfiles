@@ -1,0 +1,29 @@
+@import "common.rasi"
+
+* {
+  accent-color: @color6;
+}
+
+configuration {
+  window-format: "{w} · {c} · {t}";
+  show-icons: true;
+}
+
+window {
+  width: 900px;
+  location: northwest;
+  x-offset: 68;
+  y-offset: 68;
+}
+
+entry {
+  placeholder: "  Switch to...";
+}
+
+listview {
+  lines: 5;
+}
+
+element-icon {
+  size: 32px;
+}

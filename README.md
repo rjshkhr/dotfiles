@@ -6,6 +6,14 @@
 
 </div>
 
+## Screenshots
+
+![Screenshot 1](https://imgur.com/FrW3ion.png)
+
+![Screenshot 2](https://imgur.com/vyUY0Ik.png)
+
+![Screenshot 3](https://imgur.com/m0drooF.png)
+
 ## Overview
 
 - **OS** • [Arch Linux](https://archlinux.org)

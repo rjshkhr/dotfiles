@@ -1,0 +1,20 @@
+#!/bin/bash
+
+print_row() {
+    for i in {0..7}; do
+        echo -en "\e[4${i}m      \e[0m "
+    done
+    echo
+}
+
+print_bright_row() {
+    for i in {0..7}; do
+        echo -en "\e[10${i}m      \e[0m "
+    done
+    echo
+}
+
+# echo
+print_row
+print_bright_row
+echo
