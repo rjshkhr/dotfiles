@@ -8,11 +8,13 @@
 
 ## Screenshots
 
-![Screenshot 1](https://imgur.com/FrW3ion.png)
+![Screenshot 1](https://imgur.com/tpvx2kl.png)
 
-![Screenshot 2](https://imgur.com/vyUY0Ik.png)
+![Screenshot 2](https://imgur.com/rQ1LPIN.png)
 
-![Screenshot 3](https://imgur.com/m0drooF.png)
+![Screenshot 3](https://imgur.com/48InAod.png)
+
+![Screenshot 4](https://imgur.com/v0RfZEV.png)
 
 ## Overview
 

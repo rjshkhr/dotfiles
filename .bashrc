@@ -68,9 +68,6 @@ GIT_STATUS='$(parse_git_status)'
 # Prompt
 PS1="${DIRECTORY}${YELLOW}${GIT_BRANCH}${RED}${GIT_STATUS}${RESET} ${BLUE}${RESET} "
 
-# Git branch in prompt
-PS1="\[\e]0;\w\a\]$PS1"
-
 # Case-insensitive tab completion
 bind 'set completion-ignore-case on'
 
@@ -95,3 +92,5 @@ mkcd() { mkdir -p "$1" && cd "$1"; }
 
 # Color stats in completion
 bind "set colored-stats on"
+
+export QT_QPA_PLATFORMTHEME=gtk2
