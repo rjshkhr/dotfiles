@@ -6,13 +6,13 @@
 }
 
 configuration {
-  icon-theme: "Papirus-Dark";
+  icon-theme: "Everforest-Dark";
   font: "CaskaydiaCove Nerd Font Bold 16";
 }
 
 window {
   border: 0;
-  border-radius: 24px;
+  border-radius: 20px;
 }
 
 inputbar {
@@ -38,6 +38,11 @@ element {
 
 element selected {
   background-color: @accent-color;
+  text-color: @background-color;
+}
+
+element-text selected {
+  text-color: @background-color;
 }
 
 element-icon {

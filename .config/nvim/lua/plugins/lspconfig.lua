@@ -57,8 +57,12 @@ local config = function()
 	})
 
 	local servers = {
+		"gopls",
 		"ts_ls",
 		"bashls",
+		"tailwindcss",
+		"docker_compose_language_service",
+		"dockerls",
 	}
 
 	for _, a in ipairs(servers) do

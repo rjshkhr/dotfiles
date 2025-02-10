@@ -14,6 +14,21 @@ from colors import colors
 
 mod = "mod4"
 terminal = "kitty"
+widget_radius = 18
+
+
+@lazy.function
+def center_floating_window(qtile_instance):
+    """Center the current floating window on the screen.
+
+    Args:
+        qtile_instance: The Qtile instance object
+    """
+
+    window = qtile_instance.current_window
+    if window and window.floating:
+        window.center()
+
 
 keys = [
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
@@ -73,6 +88,12 @@ keys = [
     ),
     Key([mod, "shift"], "n", lazy.spawn("nemo")),
     Key([mod, "shift"], "r", lazy.spawn(f"{terminal} -e ranger"), desc="Open ranger"),
+    Key(
+        [mod, "shift"],
+        "c",
+        center_floating_window,
+        desc="Center floating window",
+    ),
     Key([mod, "mod1"], "w", lazy.spawn("google-chrome-stable")),
     Key([mod, "mod1"], "p", lazy.spawn("firefox")),
     Key([mod, "mod1"], "s", lazy.spawn(os.path.expanduser("~/.local/bin/powermenu"))),
@@ -103,7 +124,10 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(f"{i+1}", label="󰏃") for i in range(6)]
+groups = [
+    Group(i[0], label=i[1])
+    for i in [("1", ""), ("2", "󰈹"), ("3", ""), ("4", "󰉋"), ("5", "󰭹"), ("6", "󰣇")]
+]
 
 for i in groups:
     keys.extend(
@@ -127,11 +151,11 @@ layouts = [
     layout.MonadTall(
         border_width=4,
         single_border_width=0,
-        margin=12,
+        margin=8,
         border_focus=colors["color7"],
         border_normal=colors["color8"],
     ),
-    layout.Max(margin=12),
+    layout.Max(margin=8),
 ]
 
 widget_defaults = {
@@ -184,7 +208,7 @@ screens = [
             [
                 widget.TextBox(
                     text="󰀻",
-                    foreground=colors["foreground"],
+                    foreground=colors["background"],
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
                             "rofi -show drun -p '' -theme ~/.config/rofi/drun.rasi"
@@ -193,7 +217,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["color4"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -201,7 +225,7 @@ screens = [
                 widget.Sep(**sep_config),
                 widget.TextBox(
                     text="󰖯",
-                    foreground=colors["foreground"],
+                    foreground=colors["background"],
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
                             "rofi -show window -p '' -theme ~/.config/rofi/window.rasi"
@@ -210,7 +234,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["color6"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -218,29 +242,29 @@ screens = [
                 widget.Sep(**sep_config),
                 widget.GroupBox(
                     borderwidth=0,
-                    block_highlight_text_color=colors["color1"],
+                    block_highlight_text_color=colors["color3"],
                     active=colors["foreground"],
                     inactive=colors["color8"],
                     disable_drag=True,
                     radius=True,
-                    padding=5,
+                    padding_x=0,
                     margin_x=28,
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
                 ),
-                widget.Prompt(foreground=colors["background"]),
+                widget.Prompt(foreground=colors["color8"]),
                 widget.Spacer(),
                 widget.Memory(
                     format="󰍛 {MemUsed:.0f}{mm}",
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -252,7 +276,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -270,7 +294,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -283,7 +307,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -296,7 +320,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["background"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -307,7 +331,9 @@ screens = [
                     format="󰥔 %I:%M",
                     decorations=[
                         RectDecoration(
-                            colour=colors["background"], radius=20, filled=True
+                            colour=colors["background"],
+                            radius=widget_radius,
+                            filled=True,
                         )
                     ],
                     foreground=colors["color4"],
@@ -317,7 +343,7 @@ screens = [
                     fmt="  {}",
                     format="{essid}",
                     interface=get_wireless_interface(),
-                    foreground=colors["foreground"],
+                    foreground=colors["background"],
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
                             "networkmanager_dmenu -theme ~/.config/rofi/networkmenu.rasi"
@@ -326,7 +352,7 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["color2"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
@@ -334,7 +360,7 @@ screens = [
                 widget.Sep(**sep_config),
                 widget.TextBox(
                     text="󰐥",
-                    foreground=colors["foreground"],
+                    foreground=colors["background"],
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
                             os.path.expanduser("~/.local/bin/powermenu")
@@ -343,17 +369,16 @@ screens = [
                     decorations=[
                         RectDecoration(
                             colour=colors["color1"],
-                            radius=20,
+                            radius=widget_radius,
                             filled=True,
                         )
                     ],
                 ),
             ],
-            44,
+            42,
             background="#00000000",
             border_color="#00000000",
-            border_width=[10, 0, 0, 0],
-            margin=[0, 12, 0, 12],
+            border_width=[8, 8, 0, 8],
         ),
     ),
 ]

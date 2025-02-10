@@ -1,0 +1,57 @@
+:root {
+  --ytmusic-color-primary: #96b088;
+  --ytmusic-color-secondary: #7e9aab;
+  --ytmusic-color-tertiary: #ccac7d;
+
+  --ytmusic-background: #1d2326;
+  --ytmusic-background-alt: #242b2d;
+  --ytmusic-background-contrast: #485457;
+
+  --ytmusic-text-primary: #e6e7e6;
+  --ytmusic-text-secondary: #ced3dc;
+  --ytmusic-text-disabled: #485457;
+}
+
+/* Main elements */
+ytmusic-app-layout {
+  background-color: var(--ytmusic-background) !important;
+}
+
+/* Header */
+ytmusic-nav-bar {
+  background-color: var(--ytmusic-background-alt) !important;
+  border-bottom: 1px solid var(--ytmusic-background-contrast) !important;
+}
+
+/* Bottom player bar */
+ytmusic-player-bar {
+  background-color: var(--ytmusic-background-alt) !important;
+  border-top: 1px solid var(--ytmusic-background-contrast) !important;
+}
+
+/* Progress bar */
+#progress-bar {
+  --paper-slider-active-color: var(--ytmusic-color-primary) !important;
+  --paper-slider-knob-color: var(--ytmusic-color-primary) !important;
+  --paper-slider-pin-color: var(--ytmusic-color-primary) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ytmusic-background) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ytmusic-scrollbar-color) !important;
+  border-radius: 4px !important;
+}
+
+/* Selection */
+::selection {
+  background: var(--ytmusic-color-primary) !important;
+  color: var(--ytmusic-background) !important;
+}

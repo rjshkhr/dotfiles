@@ -7,8 +7,8 @@
 window {
   width: 600px;
   location: northeast;
-  x-offset: -68;
-  y-offset: 68;
+  x-offset: -66;
+  y-offset: 60;
 }
 
 entry {

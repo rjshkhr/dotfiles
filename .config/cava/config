@@ -1,0 +1,15 @@
+[general]
+  bar_width = 1
+  bar_spacing = 0
+
+[color]
+foreground = '#839C98'
+gradient = 8
+gradient_color_1 = '#7E9AAB'
+gradient_color_2 = '#94B1C4'
+gradient_color_3 = '#839C98'
+gradient_color_4 = '#96B088'
+gradient_color_5 = '#CCAC7D'
+gradient_color_6 = '#839C98'
+gradient_color_7 = '#BC8F7D'
+gradient_color_8 = '#96B088'

@@ -1,102 +1,102 @@
 [global]
-    # Defines where the notifications should be placed in a multi-monitor setup
-    follow = keyboard
+  # Defines where the notifications should be placed in a multi-monitor setup
+  follow = keyboard
 
-     # Fixed width of a notification
-    width = 400
+   # Fixed width of a notification
+  width = 400
 
-    # Maximum height of a single notification
-    height = 300
+  # Maximum height of a single notification
+  height = 300
 
-    # Origin of the notification window on the screen
-    origin = top-right
+  # Origin of the notification window on the screen
+  origin = top-right
 
-    # Offset from the origin
-    offset = 9x46
+  # Offset from the origin
+  offset = 8x42
 
-    # When an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
-    progress_bar = true
+  # When an integer value is passed to dunst as a hint, a progress bar will be drawn at the bottom of the notification
+  progress_bar = true
 
-    # Set the progress bar height
-    progress_bar_height = 18
+  # Set the progress bar height
+  progress_bar_height = 18
 
-    # Set the frame width of the progress bar
-    progress_bar_frame_width = 0
+  # Set the frame width of the progress bar
+  progress_bar_frame_width = 0
 
-    # Set the minimum width of the progress bar
-    progress_bar_min_width = 150
+  # Set the minimum width of the progress bar
+  progress_bar_min_width = 150
 
-    # Set the maximum width of the progress bar
-    progress_bar_max_width = 350
+  # Set the maximum width of the progress bar
+  progress_bar_max_width = 350
 
-    # Set the corner radius of the progress bar
-    progress_bar_corner_radius = 14
+  # Set the corner radius of the progress bar
+  progress_bar_corner_radius = 14
 
-    # Vertical padding
-    padding = 16
+  # Vertical padding
+  padding = 16
 
-    # Horizontal padding
-    horizontal_padding = 16
+  # Horizontal padding
+  horizontal_padding = 16
 
-    # The distance from the text to the icon
-    text_icon_padding = 16
+  # The distance from the text to the icon
+  text_icon_padding = 16
 
-    # Width of frame around the notification window
-    frame_width = 0
+  # Width of frame around the notification window
+  frame_width = 0
 
-    # Size of gap to display between notifications
-    gap_size = 12
+  # Size of gap to display between notifications
+  gap_size = 12
 
-    font = CaskaydiaCove NFM 12
+  font = CaskaydiaCove NFM 12
 
-    # The amount of extra spacing between text lines in pixels
-    line_height = 1.5
+  # The amount of extra spacing between text lines in pixels
+  line_height = 1.5
 
-    # Format of the message (<b> bold tag, %s notification summary, %b notification body, \n new line)
-    format = "<b>%s</b>\n%b"
+  # Format of the message (<b> bold tag, %s notification summary, %b notification body, \n new line)
+  format = "<b>%s</b>\n%b"
 
-    # Stack together notifications with the same content
-    stack_duplicates = true
+  # Stack together notifications with the same content
+  stack_duplicates = true
 
-    # Don't hide the count of stacked notifications with the same content
-    hide_duplicate_count = true
+  # Don't hide the count of stacked notifications with the same content
+  hide_duplicate_count = true
 
-    # Show an indicator if a notification contains actions and/or open-able URLs
-    show_indicators = false
+  # Show an indicator if a notification contains actions and/or open-able URLs
+  show_indicators = false
 
-    # This setting enables the new icon lookup method (required for icon_theme)
-    enable_recursive_icon_lookup = true
+  # This setting enables the new icon lookup method (required for icon_theme)
+  enable_recursive_icon_lookup = true
 
-    # Set icon theme (only used for recursive icon lookup)
-    icon_theme = "Papirus-Dark, Adwaita"
+  # Set icon theme (only used for recursive icon lookup)
+  icon_theme = "Everforest-Dark, Papirus-Dark, Adwaita"
 
-    min_icon_size = 32
-    max_icon_size = 96
-    icon_corner_radius = 10
+  min_icon_size = 32
+  max_icon_size = 96
+  icon_corner_radius = 10
 
-    # Maximum amount of notifications kept in history
-    history_length = 100
+  # Maximum amount of notifications kept in history
+  history_length = 100
 
-    # Define the title of the windows spawned by dunst
-    title = Dunst
+  # Define the title of the windows spawned by dunst
+  title = Dunst
 
-    # Define the class of the windows spawned by dunst
-    class = Dunst
+  # Define the class of the windows spawned by dunst
+  class = Dunst
 
-    # Define the corner radius of the notification window
-    corner_radius = 10
+  # Define the corner radius of the notification window
+  corner_radius = 10
 
 [urgency_low]
-   background = "#363E4C"
-   foreground = "#FCFCFC"
-   timeout = 10
+  background = "#242B2D"
+  foreground = "#E6E7E6"
+  timeout = 10
 
 [urgency_normal]
-   background = "#363E4C"
-   foreground = "#FCFCFC"
-   timeout = 10
+  background = "#242B2D"
+  foreground = "#E6E7E6"
+  timeout = 10
 
 [urgency_critical]
-   background = "#363E4C"
-   foreground = "#FCFCFC"
-   timeout = 0
+  background = "#242B2D"
+  foreground = "#E6E7E6"
+  timeout = 0

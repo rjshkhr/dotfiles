@@ -42,6 +42,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 # Bin directories
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/npm/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

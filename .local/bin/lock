@@ -1,4 +1,5 @@
 #!/bin/bash
+
 background=$(xrdb -query | grep -oP 'background:\s*\K#\w+' | tr -d '#')
 foreground=$(xrdb -query | grep -oP 'foreground:\s*\K#\w+' | tr -d '#')
 blue=$(xrdb -query | grep -oP 'color4:\s*\K#\w+' | tr -d '#')
@@ -7,7 +8,7 @@ green=$(xrdb -query | grep -oP 'color2:\s*\K#\w+' | tr -d '#')
 
 i3lock \
   --clock \
-  --blur 24 \
+  --blur 5 \
   --inside-color="${background}99" \
   --ring-color="${foreground}99" \
   --line-uses-inside \

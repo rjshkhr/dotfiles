@@ -12,8 +12,8 @@ configuration {
 window {
   width: 900px;
   location: northwest;
-  x-offset: 68;
-  y-offset: 68;
+  x-offset: 66;
+  y-offset: 60;
 }
 
 entry {

@@ -5,6 +5,10 @@ local config = function()
 			"pyright",
 			"bashls",
 			"ts_ls",
+			"tailwindcss",
+			"gopls",
+			"docker_compose_language_service",
+			"dockerls",
 		},
 
 		automatic_installation = true,

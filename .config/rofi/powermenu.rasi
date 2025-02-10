@@ -7,8 +7,8 @@
 window {
   width: 300px;
   location: northeast;
-  x-offset: -12;
-  y-offset: 68;
+  x-offset: -10;
+  y-offset: 60;
 }
 
 inputbar {

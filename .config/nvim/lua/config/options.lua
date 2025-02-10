@@ -27,14 +27,3 @@ opt.cursorline = true
 -- Appearance
 opt.scrolloff = 10
 opt.sidescrolloff = 10
-
--- Set window borders: keep horizontal lines (─), remove vertical ones
-vim.opt.fillchars:append({
-	horiz = "─",
-	horizup = "─",
-	horizdown = "─",
-	vert = " ",
-	vertleft = " ",
-	vertright = " ",
-	verthoriz = "─",
-})

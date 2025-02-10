@@ -14,7 +14,7 @@ print_bright_row() {
     echo
 }
 
-# echo
+echo
 print_row
 print_bright_row
 echo
