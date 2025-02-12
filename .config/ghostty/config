@@ -1,0 +1,11 @@
+theme = "shadow.conf"
+
+font-family = "CaskaydiaCove NFM"
+font-size = 13
+
+window-padding-x = 16
+window-padding-y = 16
+
+window-decoration = "none"
+
+adjust-cell-height = "40%"
