@@ -1,0 +1,18 @@
+scheme: "Shadow"
+author: "User"
+base00: "1D2326" # background
+base01: "242B2D" # color0
+base02: "485457" # color8
+base03: "9CA3AF" # cursor
+base04: "CED3DC" # color7
+base05: "E6E7E6" # foreground
+base06: "E8EBF0" # color15
+base07: "E8EBF0" # color15 (bright white)
+base08: "BC8F7D" # color1 (red)
+base09: "CCAC7D" # color3 (yellow)
+base0A: "E2BF8F" # color11 (bright yellow)
+base0B: "96B088" # color2 (green)
+base0C: "839C98" # color6 (cyan)
+base0D: "7E9AAB" # color4 (blue)
+base0E: "A68CAA" # color5 (magenta)
+base0F: "D4A394" # color9 (bright red)
