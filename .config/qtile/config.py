@@ -268,7 +268,7 @@ screens = [
                             filled=True,
                         )
                     ],
-                    foreground=colors["color1"],
+                    foreground=colors["color5"],
                 ),
                 widget.Sep(**sep_config),
                 widget.CPU(
@@ -299,19 +299,6 @@ screens = [
                         )
                     ],
                     foreground=colors["color2"],
-                ),
-                widget.Sep(**sep_config),
-                widget.PulseVolume(
-                    fmt="󰕾 {}",
-                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("pavucontrol")},
-                    decorations=[
-                        RectDecoration(
-                            colour=colors["background"],
-                            radius=widget_radius,
-                            filled=True,
-                        )
-                    ],
-                    foreground=colors["color5"],
                 ),
                 widget.Sep(**sep_config),
                 widget.Backlight(
