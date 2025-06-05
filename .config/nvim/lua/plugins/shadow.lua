@@ -1,6 +1,6 @@
 return {
-	-- "rjshkhr/shadow.nvim",
-	dir = "~/Projects/shadow.nvim",
+	"rjshkhr/shadow.nvim",
+	-- dir = "~/Projects/personal/shadow.nvim",
 	priority = 1000,
 	config = function()
 		vim.opt.termguicolors = true

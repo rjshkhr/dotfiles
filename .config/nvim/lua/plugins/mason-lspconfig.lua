@@ -9,6 +9,7 @@ local config = function()
 			"gopls",
 			"docker_compose_language_service",
 			"dockerls",
+			"volar",
 		},
 
 		automatic_installation = true,

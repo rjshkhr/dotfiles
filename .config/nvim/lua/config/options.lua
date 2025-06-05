@@ -20,7 +20,7 @@ opt.expandtab = true
 
 -- Lines
 opt.number = true
-opt.relativenumber = true
+-- opt.relativenumber = true
 opt.wrap = false
 opt.cursorline = true
 

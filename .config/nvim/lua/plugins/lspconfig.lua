@@ -2,8 +2,12 @@ local on_attach = function(_, bufnr)
 	local keymap = vim.keymap
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
-	keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-	keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+	keymap.set("n", "[d", function()
+		vim.diagnostic.jump({ count = -1, float = true })
+	end, opts)
+	keymap.set("n", "]d", function()
+		vim.diagnostic.jump({ count = 1, float = true })
+	end, opts)
 	keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 	keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	keymap.set("n", "gr", vim.lsp.buf.references, opts)
@@ -56,13 +60,30 @@ local config = function()
 		},
 	})
 
+	local mason_registry = require("mason-registry")
+	local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+		.. "/node_modules/@vue/language-server"
+
+	lspconfig.ts_ls.setup({
+		init_options = {
+			plugins = {
+				{
+					name = "@vue/typescript-plugin",
+					location = vue_language_server_path,
+					languages = { "vue" },
+				},
+			},
+		},
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+	})
+
 	local servers = {
 		"gopls",
-		"ts_ls",
 		"bashls",
 		"tailwindcss",
 		"docker_compose_language_service",
 		"dockerls",
+		"volar",
 	}
 
 	for _, a in ipairs(servers) do
