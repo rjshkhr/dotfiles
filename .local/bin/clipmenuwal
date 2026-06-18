@@ -1,0 +1,12 @@
+#!/bin/sh
+
+background="#1D2326"
+foreground="#E6E7E6"
+color2="#96B088"
+
+CM_LAUNCHER=dmenu clipmenu -i \
+    -nb "$background" \
+    -nf "$foreground" \
+    -sb "$color2" \
+    -sf "$background" \
+    -fn "CaskaydiaCove NFM:size=13"

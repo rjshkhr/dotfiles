@@ -19,18 +19,18 @@
 ## Overview
 
 - **OS** • [Arch Linux](https://archlinux.org)
-- **WM** • [Qtile](https://github.com/qtile/qtile)
-- **Terminal** • [Kitty](https://github.com/kovidgoyal/kitty)
-- **Shell** • [Bash](https://www.gnu.org/software/bash)
+- **WM** • [bspwm](https://github.com/baskerville/bspwm) ([sxhkd](https://github.com/baskerville/sxhkd))
+- **Terminal** • [urxvt](https://github.com/exg/rxvt-unicode)
+- **Shell** • [Zsh](https://www.zsh.org)
 - **Editor** • [Neovim](https://neovim.io)
 - **Colorscheme** • [Shadow](https://github.com/rjshkhr/shadow.nvim)
 - **Font** • [CaskaydiaCove Nerd Font](https://www.nerdfonts.com)
 - **Compositor** • [Picom](https://github.com/yshui/picom)
 - **Notification** • [Dunst](https://github.com/dunst-project/dunst)
-- **App Launcher** • [Rofi](https://github.com/davatorium/rofi)
+- **App Launcher** • [dmenu](https://tools.suckless.org/dmenu)
 - **Screen Lock** • [i3lock-color](https://github.com/Raymo111/i3lock-color)
 - **Display Manager** • [SDDM](https://github.com/sddm/sddm)
-- **Clipboard** • [Rofi Greenclip](https://github.com/erebe/greenclip)
+- **Clipboard** • [Clipmenu](https://github.com/cdown/clipmenu)
 - **Browser** • [Firefox](https://www.mozilla.org/en-US/firefox) ([Startpage](https://github.com/rjshkhr/startpage), [Theme](https://github.com/rjshkhr/shadow-firefox))
 - **File Manager** • [Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)
 

@@ -5,6 +5,17 @@ Xcursor.size: 32
 ! 150% scaling
 Xft.dpi: 144
 
+! URxvt
+URxvt*boldFont: xft:CaskaydiaCove NFM:size=13:style=Bold
+URxvt*font: xft:CaskaydiaCove NFM:size=13:style=Regular
+URxvt*italicFont: xft:CaskaydiaCove NFM:size=13:style=Italic
+URxvt*boldItalicFont: xft:CaskaydiaCove NFM:size=13:style=Bold Italic
+URxvt.scrollBar: false
+URxvt.internalBorder: 24
+URxvt.geometry: 80x-1
+URxvt*lineSpace: 4
+URxvt*letterSpace: -1
+
 ! Shadow Colors
 *.foreground:   #E6E7E6
 *.background:   #1D2326

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+background="#1D2326"
+foreground="#E6E7E6"
+color4="#7E9AAB"
+
+dmenu_run -i \
+    -l 8 \
+    -nb "$background" \
+    -nf "$foreground" \
+    -sb "$color4" \
+    -sf "$background" \
+    -fn "CaskaydiaCove NFM:size=13"
