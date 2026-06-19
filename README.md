@@ -29,9 +29,8 @@
 - **Notification** • [Dunst](https://github.com/dunst-project/dunst)
 - **App Launcher** • [dmenu](https://tools.suckless.org/dmenu)
 - **Screen Lock** • [i3lock-color](https://github.com/Raymo111/i3lock-color)
-- **Display Manager** • [SDDM](https://github.com/sddm/sddm)
 - **Clipboard** • [Clipmenu](https://github.com/cdown/clipmenu)
-- **Browser** • [Firefox](https://www.mozilla.org/en-US/firefox) ([Startpage](https://github.com/rjshkhr/startpage), [Theme](https://github.com/rjshkhr/shadow-firefox))
+- **Browser** • [Brave](https://brave.com)
 - **File Manager** • [Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)
 
 ## Installation

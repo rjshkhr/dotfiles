@@ -5,7 +5,7 @@ super + d
 	~/.local/bin/dmenuwal_run
 
 super + shift + b
-	firefox
+	brave
 
 super + shift + r
 	urxvt -e ranger
@@ -20,7 +20,7 @@ super + shift + x
 	~/.local/bin/lock
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
-    brightnessctl {set +5%, set 5%-}
+    brightnessctl set {+5%,5%-} && notify-send -r 1002 -t 800 "Brightness" "$(brightnessctl -m | cut -d, -f4)"
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
     wpctl set-volume @DEFAULT_AUDIO_SINK@ {5%+,5%-}
@@ -35,10 +35,10 @@ XF86AudioMicMute
     playerctl {play-pause,play-pause,next,previous}
 
 {Print,shift + Print}
-    scrot {_,-s} ~/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png
+    scrot {_,-s} ~/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png && notify-send "Screenshot" "Saved to ~/Pictures/Screenshots"
 
 ctrl + Print
-    scrot -s - | xclip -selection clipboard -t image/png
+    scrot -s - | xclip -selection clipboard -t image/png && notify-send "Screenshot" "Copied to clipboard"
 
 # make sxhkd reload its configuration files:
 super + Escape
