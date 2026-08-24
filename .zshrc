@@ -45,3 +45,24 @@ source <(fzf --zsh)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#485457'
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+_auto_venv() {
+  local dir="$PWD" found=""
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/.venv/bin/activate" ]]; then found="$dir/.venv"; break; fi
+    if [[ -f "$dir/venv/bin/activate"  ]]; then found="$dir/venv";  break; fi
+    dir="${dir:h}"
+  done
+
+  if [[ -n "$found" ]]; then
+    if [[ "$VIRTUAL_ENV" != "$found" ]]; then
+      source "$found/bin/activate"
+    fi
+  elif [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+  fi
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd _auto_venv
+_auto_venv

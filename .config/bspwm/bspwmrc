@@ -10,6 +10,9 @@ bspc config window_gap          24
 bspc config focused_border_color    "#7E9AAB"
 bspc config normal_border_color     "#1D2326"
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      false
+bspc config split_ratio               0.52
+bspc config borderless_monocle        true
+bspc config gapless_monocle           false
+bspc config focus_follows_pointer     true
+
+bspc rule -a Blueberry.py         state=floating

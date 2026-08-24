@@ -5,8 +5,10 @@
 setxkbmap -option caps:escape
 xset b off
 xset r rate 300 50
-xset s 300 300
 xsetroot -cursor_name left_ptr &
+
+# --- export session env to systemd + D-Bus ---
+dbus-update-activation-environment --systemd DISPLAY XAUTHORITY
 
 # --- session daemons (background) ---
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
